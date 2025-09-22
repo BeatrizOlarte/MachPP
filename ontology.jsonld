@@ -1,0 +1,2676 @@
+[ {
+  "@id" : "MachPP:CuttingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachineToolComponents"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "MachPP:FinalWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "MachPP:Fixture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachineToolComponents"
+  } ]
+}, {
+  "@id" : "MachPP:Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "MachPP:MachineTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "MachPP:MachineToolComponents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "MachPP:MachiningOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Operation"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "MachPP:Manufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/org#Organization"
+  } ]
+}, {
+  "@id" : "MachPP:ManufacturingProcessPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sequences od machining operations to obtain a general objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "MachPP:Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "MachPP:Operation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "group of actions/task onthe same workpiece usually without changing set up"
+  } ]
+}, {
+  "@id" : "MachPP:Parameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "MachPP:RawWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "MachPP:SemiFinalWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "MachPP:Task",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is the most granular unit of work, individual actions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  } ]
+}, {
+  "@id" : "MachPP:Workpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Manufacturer"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/composedof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Task"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Task"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Task"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Operation"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/input"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Fixture"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Material"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/composedof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:ManufacturingProcessPlan"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "MachPP:FinalWorkpiece"
+    }, {
+      "@id" : "MachPP:RawWorkpiece"
+    }, {
+      "@id" : "MachPP:SemiFinalWorkpiece"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:MachineToolComponents"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "MachPP:Manufacturer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer"
+  } ]
+}, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Beatriz Olarte Martinez"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "This ontology enables the mapping of machining process planning cards into the individual tasks that are required to produce a machined workpiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ontology developer in the framework of the EU project with the support of KMI in order to improve the retrieval of information from chip removal processes, especifically from the route cards or sheet cards"
+  }, {
+    "@value" : "“This work was conducted using Protégé.” \nMusen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Machining Process Planning Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : "None"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP/1.0.0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.136"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.111"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:FinalWorkpiece"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.289"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.104"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "-1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "13.2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.125"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.289"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "10.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "13.6"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.554"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.278"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:RawWorkpiece"
+  }, {
+    "@id" : "MachPP:Workpiece"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.25"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.12"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.089"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.184"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.216"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.409"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.093"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  }, {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.125"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Task"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:ManufacturingProcessPlan"
+  } ],
+  "https://w3id.org/pmd/co/composedof" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ"
+  } ],
+  "https://w3id.org/pmd/co/composedof" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Material"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Fixture"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConF_d32_D40.5_l7.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "47.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "13.6"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Buyer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : "XYZ"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.12"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "557.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "250.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "2.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "424.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "120.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.3"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "557.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "250.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.12"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "217.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "100.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.15"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "557.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "280.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "3.5"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "471.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "15"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "120.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.18"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "314.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "50.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.15"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "220.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "12.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "251.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "45.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.25"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "557.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "250.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode" : [ {
+    "@value" : ""
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:CuttingTool"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.3"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "557.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "250.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachineToolComponents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "13.8"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "10.5"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.1"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "47.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "47.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "32.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "35.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "39.4"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "28.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "40.5"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "36.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  }, {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "cutting length divided by spindle speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "f"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GangTooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GeomParams",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "47.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "1.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "15.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "47.0"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "3.5"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  }, {
+    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "6.7"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "9.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonHole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  }, {
+    "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachineTool"
+  }, {
+    "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Operation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ManualOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Operation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Material"
+  }, {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Manufacturer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#NumZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Manufacturer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5000"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "22000"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "427"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYChuck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5000"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "15"
+  } ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "240"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "12"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#PeckDepth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Geometry"
+  }, {
+    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Request for Quotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Operation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "MachPP:Manufacturer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachineToolComponents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "h"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:Parameter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation"
+  }, {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Turning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "MachPP:MachiningOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Workpiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDimensions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFinalGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInitialGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/input"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Task"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/output"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:ManufacturingProcessPlan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:CuttingTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Unit: N m (Newton metro)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "MachPP:Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/pmd/co/composedof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/co/input",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/pmd/co/output",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3.org/ns/org#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

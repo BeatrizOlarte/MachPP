@@ -1,0 +1,1512 @@
+@prefix : <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#> .
+
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP/1.0.0> ;
+                                                             <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by/4.0/" ;
+                                                             <http://purl.org/dc/elements/1.1/creator> "Beatriz Olarte Martinez" ;
+                                                             <http://purl.org/dc/elements/1.1/description> "This ontology enables the mapping of machining process planning cards into the individual tasks that are required to produce a machined workpiece" ;
+                                                             rdfs:comment "Ontology developer in the framework of the EU project with the support of KMI in order to improve the retrieval of information from chip removal processes, especifically from the route cards or sheet cards" ,
+                                                                          """“This work was conducted using Protégé.” 
+Musen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003.""" ;
+                                                             rdfs:label "Machining Process Planning Ontology" ;
+                                                             owl:priorVersion "None" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts
+:cuts rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent
+:hasComponent rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole
+:hasInputRole rdf:type owl:ObjectProperty ;
+              owl:equivalentProperty <https://w3id.org/pmd/co/input> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer
+:hasManufacturer rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole
+:hasOutputRole rdf:type owl:ObjectProperty ;
+               owl:equivalentProperty <https://w3id.org/pmd/co/output> ;
+               rdfs:domain <MachPP:Task> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter
+:hasParameter rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor
+:hasPredecessor rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasSuccessor .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor
+:hasSuccessor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasUnit
+:hasUnit rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding
+:hasWorkholding rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn
+:isFixedIn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor
+:isSpecificFor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy
+:isSpecifiedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn
+:isStoredIn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom
+:madeFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs
+:performs rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces
+:produces rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms
+:transforms rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/composedof
+<https://w3id.org/pmd/co/composedof> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/pmd/co/input
+<https://w3id.org/pmd/co/input> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/output
+<https://w3id.org/pmd/co/output> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GCode
+:GCode rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge
+:hasBaseEdge rdf:type owl:DatatypeProperty ;
+             rdfs:domain <MachPP:Geometry> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode
+:hasCode rdf:type owl:DatatypeProperty ;
+         rdfs:domain <MachPP:Workpiece> ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia
+:hasCylDia rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength
+:hasCylLength rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth
+:hasDepth rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain <MachPP:Geometry> ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter
+:hasDiameter rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain <MachPP:Geometry> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDimensions
+:hasDimensions rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:domain <MachPP:Task> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate
+:hasFeedRate rdf:type owl:DatatypeProperty ;
+             rdfs:domain <MachPP:CuttingTool> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFinalGeometry
+:hasFinalGeometry rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode
+:hasISOCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <MachPP:CuttingTool> ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInitialGeometry
+:hasInitialGeometry rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength
+:hasLength rdf:type owl:DatatypeProperty ;
+           rdfs:domain <MachPP:Geometry> ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool
+:hasMaxCuttingTool rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CuttingToolStorage ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter
+:hasMaxDiameter rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Chuck ;
+                rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed
+:hasMaxSpeed rdf:type owl:DatatypeProperty ;
+             rdfs:domain <MachPP:CuttingTool> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed
+:hasMaxSpindleSpeed rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Spindle .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter
+:hasMinDiameter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses
+:hasNumPasses rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain <MachPP:CuttingTool> ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ
+:hasNumZ rdf:type owl:DatatypeProperty ;
+         rdfs:domain <MachPP:CuttingTool> ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth
+:hasPeckDepth rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain <MachPP:CuttingTool> ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch
+:hasPitch rdf:type owl:DatatypeProperty ;
+          rdfs:domain <MachPP:Geometry> ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower
+:hasPower rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Spindle .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPrice
+:hasPrice rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber
+:hasProjectNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <MachPP:ManufacturingProcessPlan> ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed
+:hasRecommendedSpeed rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <MachPP:CuttingTool> ;
+                     rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness
+:hasThickness rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :MaterialRemoved ;
+              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque
+:hasTorque rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Spindle ;
+           rdfs:comment "Unit: N m (Newton metro)" .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth
+:hasWidth rdf:type owl:DatatypeProperty ;
+          rdfs:domain <MachPP:Geometry> ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity
+:millingCapacity rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  MachPP:CuttingTool
+<MachPP:CuttingTool> rdf:type owl:Class ;
+                     rdfs:subClassOf <MachPP:MachineToolComponents> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasManufacturer ;
+                                       owl:someValuesFrom <MachPP:Manufacturer>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasParameter ;
+                                       owl:someValuesFrom <MachPP:Parameter>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :isSpecificFor ;
+                                       owl:someValuesFrom <MachPP:MachiningOperation>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :isStoredIn ;
+                                       owl:someValuesFrom :Turret
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :performs ;
+                                       owl:someValuesFrom <MachPP:MachiningOperation>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :cuts ;
+                                       owl:allValuesFrom <MachPP:Workpiece>
+                                     ] .
+
+
+###  MachPP:FinalWorkpiece
+<MachPP:FinalWorkpiece> rdf:type owl:Class ;
+                        rdfs:subClassOf <MachPP:Workpiece> .
+
+
+###  MachPP:Fixture
+<MachPP:Fixture> rdf:type owl:Class ;
+                 rdfs:subClassOf <MachPP:MachineToolComponents> .
+
+
+###  MachPP:Geometry
+<MachPP:Geometry> rdf:type owl:Class .
+
+
+###  MachPP:MachineTool
+<MachPP:MachineTool> rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasComponent ;
+                                       owl:someValuesFrom <MachPP:MachineToolComponents>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :produces ;
+                                       owl:someValuesFrom <MachPP:Workpiece>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasManufacturer ;
+                                       owl:allValuesFrom <MachPP:Manufacturer>
+                                     ] .
+
+
+###  MachPP:MachineToolComponents
+<MachPP:MachineToolComponents> rdf:type owl:Class .
+
+
+###  MachPP:MachiningOperation
+<MachPP:MachiningOperation> rdf:type owl:Class ;
+                            rdfs:subClassOf <MachPP:Operation> ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :produces ;
+                                              owl:someValuesFrom <MachPP:Workpiece>
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :transforms ;
+                                              owl:someValuesFrom <MachPP:Geometry>
+                                            ] .
+
+
+###  MachPP:Manufacturer
+<MachPP:Manufacturer> rdf:type owl:Class ;
+                      rdfs:subClassOf <https://www.w3.org/ns/org#Organization> .
+
+
+###  MachPP:ManufacturingProcessPlan
+<MachPP:ManufacturingProcessPlan> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/pmd/co/composedof> ;
+                                                    owl:someValuesFrom <MachPP:Task>
+                                                  ] ;
+                                  rdfs:comment "Sequences od machining operations to obtain a general objective" .
+
+
+###  MachPP:Material
+<MachPP:Material> rdf:type owl:Class .
+
+
+###  MachPP:Operation
+<MachPP:Operation> rdf:type owl:Class ;
+                   rdfs:comment "group of actions/task onthe same workpiece usually without changing set up" .
+
+
+###  MachPP:Parameter
+<MachPP:Parameter> rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasValue ;
+                                     owl:someValuesFrom xsd:float
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasFeedRate ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:float
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasFeedRate ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:float
+                                   ] .
+
+
+###  MachPP:RawWorkpiece
+<MachPP:RawWorkpiece> rdf:type owl:Class ;
+                      rdfs:subClassOf <MachPP:Workpiece> .
+
+
+###  MachPP:SemiFinalWorkpiece
+<MachPP:SemiFinalWorkpiece> rdf:type owl:Class ;
+                            rdfs:subClassOf <MachPP:Workpiece> .
+
+
+###  MachPP:Task
+<MachPP:Task> rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasInputRole ;
+                                owl:someValuesFrom <MachPP:Parameter>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOutputRole ;
+                                owl:someValuesFrom <MachPP:Parameter>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasPredecessor ;
+                                owl:someValuesFrom <MachPP:Task>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasSuccessor ;
+                                owl:someValuesFrom <MachPP:Task>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isSpecifiedBy ;
+                                owl:someValuesFrom <MachPP:Operation>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/pmd/co/input> ;
+                                owl:someValuesFrom <MachPP:Parameter>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDuration ;
+                                owl:someValuesFrom xsd:float
+                              ] ;
+              rdfs:comment "It is the most granular unit of work, individual actions" .
+
+
+###  MachPP:Workpiece
+<MachPP:Workpiece> rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isFixedIn ;
+                                     owl:someValuesFrom <MachPP:Fixture>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :madeFrom ;
+                                     owl:someValuesFrom <MachPP:Material>
+                                   ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck
+:Chuck rdf:type owl:Class ;
+       rdfs:subClassOf <MachPP:Fixture> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor
+:ClosingDoor rdf:type owl:Class ;
+             rdfs:subClassOf :MachineOperation ;
+             owl:disjointWith :OpeningDoor .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cone
+:Cone rdf:type owl:Class ;
+      rdfs:subClassOf <MachPP:Geometry> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum
+:ConicalFrustum rdf:type owl:Class ;
+                rdfs:subClassOf :Frustum ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasDiameter ;
+                                  owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasLength ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer
+:Customer rdf:type owl:Class ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "Buyer"@en .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed
+:CuttingSpeed rdf:type owl:Class ;
+              rdfs:subClassOf <MachPP:Parameter> ;
+              rdfs:label "vc" .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage
+:CuttingToolStorage rdf:type owl:Class ;
+                    rdfs:subClassOf <MachPP:MachineToolComponents> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder
+:Cylinder rdf:type owl:Class ;
+          rdfs:subClassOf <MachPP:Geometry> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDiameter ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:float
+                          ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth
+:Depth rdf:type owl:Class ;
+       rdfs:subClassOf <MachPP:Geometry> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter
+:Diameter rdf:type owl:Class ;
+          rdfs:subClassOf <MachPP:Geometry> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool
+:DrillingCuttingTool rdf:type owl:Class ;
+                     rdfs:subClassOf <MachPP:CuttingTool> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation
+:DrillingOperation rdf:type owl:Class ;
+                   rdfs:subClassOf <MachPP:MachiningOperation> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate
+:FeedRate rdf:type owl:Class ;
+          rdfs:subClassOf <MachPP:Parameter> ;
+          rdfs:isDefinedBy "cutting length divided by spindle speed" ;
+          rdfs:label "f" .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum
+:Frustum rdf:type owl:Class ;
+         rdfs:subClassOf <MachPP:Geometry> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GangTooling
+:GangTooling rdf:type owl:Class ;
+             rdfs:subClassOf :CuttingToolStorage .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GeomParams
+:GeomParams rdf:type owl:Class ;
+            rdfs:subClassOf <MachPP:Parameter> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix
+:Helix rdf:type owl:Class ;
+       rdfs:subClassOf <MachPP:Geometry> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDiameter ;
+                         owl:someValuesFrom xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasLength ;
+                         owl:someValuesFrom xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPitch ;
+                         owl:someValuesFrom xsd:float
+                       ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism
+:HexagonalPrism rdf:type owl:Class ;
+                rdfs:subClassOf <MachPP:Geometry> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasLength ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe
+:Lathe rdf:type owl:Class ;
+       rdfs:subClassOf <MachPP:MachineTool> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasWorkholding ;
+                         owl:someValuesFrom :Chuck
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasMaxCuttingTool ;
+                         owl:someValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDiameter ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasLength ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasMaxSpindleSpeed ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTorque ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length
+:Length rdf:type owl:Class ;
+        rdfs:subClassOf <MachPP:Geometry> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading
+:Loading rdf:type owl:Class ;
+         rdfs:subClassOf :RoboticOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation
+:MachineOperation rdf:type owl:Class ;
+                  rdfs:subClassOf <MachPP:Operation> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ManualOperation
+:ManualOperation rdf:type owl:Class ;
+                 rdfs:subClassOf <MachPP:Operation> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved
+:MaterialRemoved rdf:type owl:Class ;
+                 rdfs:subClassOf <MachPP:Material> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasThickness ;
+                                   owl:someValuesFrom xsd:float
+                                 ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool
+:MillingCuttingTool rdf:type owl:Class ;
+                    rdfs:subClassOf <MachPP:CuttingTool> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation
+:MillingOperation rdf:type owl:Class ;
+                  rdfs:subClassOf <MachPP:MachiningOperation> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#NumZ
+:NumZ rdf:type owl:Class ;
+      rdfs:subClassOf <MachPP:Parameter> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor
+:OpeningDoor rdf:type owl:Class ;
+             rdfs:subClassOf :MachineOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#PeckDepth
+:PeckDepth rdf:type owl:Class ;
+           rdfs:subClassOf <MachPP:Parameter> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism
+:Prism rdf:type owl:Class ;
+       rdfs:subClassOf <MachPP:Geometry> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDepth ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasLength ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasWidth ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:float
+                       ] .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ
+:RFQ rdf:type owl:Class ;
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :isSpecificFor ;
+                       owl:someValuesFrom :Customer
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <https://w3id.org/pmd/co/composedof> ;
+                       owl:someValuesFrom <MachPP:ManufacturingProcessPlan>
+                     ] ;
+     rdfs:label "Request for Quotation"@en .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning
+:Repositioning rdf:type owl:Class ;
+               rdfs:subClassOf :RoboticOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation
+:RoboticOperation rdf:type owl:Class ;
+                  rdfs:subClassOf <MachPP:Operation> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle
+:Spindle rdf:type owl:Class ;
+         rdfs:subClassOf <MachPP:MachineToolComponents> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished
+:TheoreticalSurfaceFinished rdf:type owl:Class ;
+                            rdfs:subClassOf <MachPP:Parameter> ;
+                            rdfs:label "h" .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool
+:TurningCuttingTool rdf:type owl:Class ;
+                    rdfs:subClassOf <MachPP:CuttingTool> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation
+:TurningOperation rdf:type owl:Class ;
+                  rdfs:subClassOf <MachPP:MachiningOperation> ;
+                  rdfs:label "Turning" .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret
+:Turret rdf:type owl:Class ;
+        rdfs:subClassOf :CuttingToolStorage .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading
+:Unloading rdf:type owl:Class ;
+           rdfs:subClassOf :RoboticOperation .
+
+
+###  https://www.w3.org/ns/org#Organization
+<https://www.w3.org/ns/org#Organization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation
+:AutomaticOperation rdf:type owl:NamedIndividual ,
+                             :MachineOperation ,
+                             :RoboticOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35
+:C35 rdf:type owl:NamedIndividual ,
+              <MachPP:Material> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConF_d32_D40.5_l7.5
+:ConF_d32_D40.5_l7.5 rdf:type owl:NamedIndividual ,
+                              :ConicalFrustum .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl
+:Conc_Cyl rdf:type owl:NamedIndividual ,
+                   :Cylinder ;
+          :hasCylLength 10 ;
+          :hasDepth "47.0"^^xsd:float ;
+          :hasMaxDiameter "30.1"^^xsd:float ;
+          :hasMinDiameter 13.6 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A
+:Customer_A rdf:type owl:NamedIndividual ,
+                     :Customer .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1
+:CuttingTool1 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :cuts <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> ;
+              :hasManufacturer :Mitsubishi ;
+              :hasParameter :CuttingTool1Param ;
+              :isSpecificFor :ExternalTurningRoughing ;
+              :hasISOCode "XYZ" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10
+:CuttingTool10 rdf:type owl:NamedIndividual ,
+                        <MachPP:CuttingTool> ,
+                        :TurningCuttingTool ;
+               :hasManufacturer :Mitsubishi ;
+               :hasParameter :CuttingTool10Param ;
+               :isSpecificFor :ProfileTurningFinishing ;
+               :hasISOCode "" ;
+               :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param
+:CuttingTool10Param rdf:type owl:NamedIndividual ,
+                             <MachPP:Parameter> ;
+                    :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> ;
+                    :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> ;
+                    :hasFeedRate "0.12"^^xsd:float ;
+                    :hasMaxSpeed "557.0"^^xsd:float ;
+                    :hasNumPasses 1 ;
+                    :hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11
+:CuttingTool11 rdf:type owl:NamedIndividual ,
+                        <MachPP:CuttingTool> ,
+                        :TurningCuttingTool ;
+               :hasManufacturer :Sandvik ;
+               :hasParameter :CuttingTool11Param ;
+               :isSpecificFor :M27ThreadingTurning ;
+               :hasISOCode "" ;
+               :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param
+:CuttingTool11Param rdf:type owl:NamedIndividual ,
+                             <MachPP:Parameter> ;
+                    :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> ;
+                    :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> ;
+                    :hasFeedRate "2.0"^^xsd:float ;
+                    :hasMaxSpeed "424.0"^^xsd:float ;
+                    :hasNumPasses 10 ;
+                    :hasRecommendedSpeed "120.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param
+:CuttingTool1Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> ;
+                   :hasFeedRate "0.3"^^xsd:float ;
+                   :hasMaxSpeed "557.0"^^xsd:float ;
+                   :hasNumPasses 1 ;
+                   :hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2
+:CuttingTool2 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Sandvik ;
+              :hasParameter :CuttingTool2Param ;
+              :isSpecificFor :TurningDrilling ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param
+:CuttingTool2Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> ;
+                   :hasFeedRate "0.12"^^xsd:float ;
+                   :hasMaxSpeed "217.0"^^xsd:float ;
+                   :hasNumPasses 1 ;
+                   :hasRecommendedSpeed "100.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3
+:CuttingTool3 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Sandvik ;
+              :hasParameter :CuttingTool3Param ;
+              :isSpecificFor :ExternalTurningFinishing ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param
+:CuttingTool3Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> ;
+                   :hasFeedRate "0.15"^^xsd:float ;
+                   :hasMaxSpeed "557.0"^^xsd:float ;
+                   :hasNumPasses 3 ;
+                   :hasRecommendedSpeed "280.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4
+:CuttingTool4 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Mitsubishi ;
+              :hasParameter :CuttingTool4Param ;
+              :isSpecificFor :M30ThreadingTurning ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param
+:CuttingTool4Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> ;
+                   :hasFeedRate "3.5"^^xsd:float ;
+                   :hasMaxSpindleSpeed "471.0"^^xsd:float ;
+                   :hasNumPasses 15 ;
+                   :hasRecommendedSpeed "120.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5
+:CuttingTool5 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :MillingCuttingTool ;
+              :hasManufacturer :Sandvik ;
+              :hasParameter :CuttingTool5Param ;
+              :isSpecificFor :FaceMilling ;
+              :hasISOCode "" ;
+              :hasNumZ 3 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param
+:CuttingTool5Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> ;
+                   :hasFeedRate "0.18"^^xsd:float ;
+                   :hasMaxSpindleSpeed "314.0"^^xsd:float ;
+                   :hasNumPasses 2 ;
+                   :hasRecommendedSpeed "50.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6
+:CuttingTool6 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Mitsubishi ;
+              :hasParameter :CuttingTool6Param ;
+              :isSpecificFor :HexagonBroachingTurning ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param
+:CuttingTool6Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> ;
+                   :hasFeedRate "0.15"^^xsd:float ;
+                   :hasMaxSpeed "220.0"^^xsd:float ;
+                   :hasNumPasses 1 ;
+                   :hasRecommendedSpeed "12.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7
+:CuttingTool7 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :DrillingCuttingTool ;
+              :hasManufacturer :Sandvik ;
+              :hasParameter :CuttingTool7Param ;
+              :isSpecificFor :DrillingTailstock ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param
+:CuttingTool7Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> ;
+                   :hasFeedRate "0.1"^^xsd:float ;
+                   :hasMaxSpeed "251.0"^^xsd:float ;
+                   :hasNumPasses 1 ;
+                   :hasRecommendedSpeed "45.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8
+:CuttingTool8 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Mitsubishi ;
+              :hasParameter :CuttingTool8Param ;
+              :isSpecificFor :FaceTurningRoughing ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param
+:CuttingTool8Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> ;
+                   :hasFeedRate "0.25"^^xsd:float ;
+                   :hasMaxSpeed "557.0"^^xsd:float ;
+                   :hasNumPasses 4 ;
+                   :hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9
+:CuttingTool9 rdf:type owl:NamedIndividual ,
+                       <MachPP:CuttingTool> ,
+                       :TurningCuttingTool ;
+              :hasManufacturer :Mitsubishi ;
+              :hasParameter :CuttingTool9Param ;
+              :isSpecificFor :ProfileTurningRoughing ;
+              :hasISOCode "" ;
+              :hasNumZ 1 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param
+:CuttingTool9Param rdf:type owl:NamedIndividual ,
+                            <MachPP:Parameter> ;
+                   :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> ;
+                   :isSpecificFor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> ;
+                   :hasFeedRate "0.3"^^xsd:float ;
+                   :hasMaxSpeed "557.0"^^xsd:float ;
+                   :hasNumPasses 1 ;
+                   :hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5
+:Cyl_d13.8_l10.5 rdf:type owl:NamedIndividual ,
+                          :Cylinder ;
+                 :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> ;
+                 :hasDiameter "13.8"^^xsd:float ;
+                 :hasLength "10.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47
+:Cyl_d30.1_l47 rdf:type owl:NamedIndividual ,
+                        :Cylinder ;
+               :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> ;
+               :hasDiameter "30.1"^^xsd:float ;
+               :hasLength "47.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47
+:Cyl_d30_l47 rdf:type owl:NamedIndividual ,
+                      :Cylinder ;
+             :hasDiameter "30.0"^^xsd:float ;
+             :hasLength "47.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35
+:Cyl_d32_l35 rdf:type owl:NamedIndividual ,
+                      :Cylinder ;
+             :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> ;
+             :hasDiameter "32.0"^^xsd:float ;
+             :hasLength "35.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28
+:Cyl_d39.4_l28 rdf:type owl:NamedIndividual ,
+                        :Cylinder ;
+               :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> ;
+               :hasDiameter "39.4"^^xsd:float ;
+               :hasLength "28.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36
+:Cyl_d40.5_l36 rdf:type owl:NamedIndividual ,
+                        :Cylinder ;
+               :hasInputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> ;
+               :hasDiameter "40.5"^^xsd:float ;
+               :hasLength "36.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock
+:DrillingTailstock rdf:type owl:NamedIndividual ,
+                            :DrillingOperation ,
+                            :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing
+:ExternalTurningFinishing rdf:type owl:NamedIndividual ,
+                                   :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing
+:ExternalTurningRoughing rdf:type owl:NamedIndividual ,
+                                  :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling
+:FaceMilling rdf:type owl:NamedIndividual ,
+                      :MillingOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing
+:FaceTurningRoughing rdf:type owl:NamedIndividual ,
+                              :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl
+:GroovedCyl rdf:type owl:NamedIndividual ,
+                     :Cylinder .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1
+:GroovedCyl_Pri_l15_dp1_h1 rdf:type owl:NamedIndividual ,
+                                    :Prism ;
+                           :hasCylDia "30.0"^^xsd:float ;
+                           :hasCylLength "47.0"^^xsd:float ;
+                           :hasDepth "1.0"^^xsd:float ;
+                           :hasLength "15.0"^^xsd:float ;
+                           :hasWidth "1.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5
+:Hel_d30_l37_p3.5 rdf:type owl:NamedIndividual ,
+                           :Helix ;
+                  :hasDiameter "30.0"^^xsd:float ;
+                  :hasLength "47.0"^^xsd:float ;
+                  :hasPitch "3.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9
+:HexPri_a14_l9 rdf:type owl:NamedIndividual ,
+                        :HexagonalPrism ;
+               :hasBaseEdge "6.7"^^xsd:float ;
+               :hasLength "9.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning
+:HexagonBroachingTurning rdf:type owl:NamedIndividual ,
+                                  :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonHole
+:HexagonHole rdf:type owl:NamedIndividual ,
+                      :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length
+:Length rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning
+:M27ThreadingTurning rdf:type owl:NamedIndividual ,
+                              :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning
+:M30ThreadingTurning rdf:type owl:NamedIndividual ,
+                              :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi
+:Mitsubishi rdf:type owl:NamedIndividual ,
+                     <MachPP:Manufacturer> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma
+:Okuma rdf:type owl:NamedIndividual ,
+                <MachPP:Manufacturer> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY
+:OkumaLB3000MY rdf:type owl:NamedIndividual ,
+                        :Lathe ;
+               :hasComponent :OkumaLB3000MY ,
+                             :OkumaLB3000MYSpindle ,
+                             :OkumaLB3000MYSpindle2 ;
+               :hasManufacturer :Okuma ;
+               :hasMaxSpindleSpeed 5000 ;
+               :hasPower 22000 ;
+               :hasTorque 427 ;
+               :millingCapacity "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYChuck
+:OkumaLB3000MYChuck rdf:type owl:NamedIndividual ,
+                             :Chuck .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle
+:OkumaLB3000MYSpindle rdf:type owl:NamedIndividual ,
+                               :Spindle ;
+                      :hasMaxSpindleSpeed 5000 ;
+                      :hasPower 15 ;
+                      :hasTorque 240 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2
+:OkumaLB3000MYSpindle2 rdf:type owl:NamedIndividual ,
+                                :Spindle .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret
+:OkumaLB3000MYTurret rdf:type owl:NamedIndividual ,
+                              :Turret ;
+                     :hasMaxCuttingTool 12 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing
+:ProfileTurningFinishing rdf:type owl:NamedIndividual ,
+                                  :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing
+:ProfileTurningRoughing rdf:type owl:NamedIndividual ,
+                                 :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation
+:RobotOperation rdf:type owl:NamedIndividual ,
+                         :RoboticOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik
+:Sandvik rdf:type owl:NamedIndividual ,
+                  <MachPP:Manufacturer> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling
+:TurningDrilling rdf:type owl:NamedIndividual ,
+                          :DrillingOperation ,
+                          :TurningOperation .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> rdf:type owl:NamedIndividual ,
+                                                                                                  <MachPP:Task> ,
+                                                                                                  :ClosingDoor ;
+                                                                                         :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> ;
+                                                                                         :isSpecifiedBy :AutomaticOperation ;
+                                                                                         :hasDuration "0.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> rdf:type owl:NamedIndividual ,
+                                                                                             <MachPP:Task> ,
+                                                                                             :DrillingOperation ;
+                                                                                    :hasInputRole :CuttingTool7Param ;
+                                                                                    :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> ;
+                                                                                    :isSpecifiedBy :DrillingTailstock ;
+                                                                                    :hasDuration "0.136"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> rdf:type owl:NamedIndividual ,
+                                                                                            <MachPP:Task> ,
+                                                                                            :TurningOperation ;
+                                                                                   :hasInputRole :CuttingTool8Param ;
+                                                                                   :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> ;
+                                                                                   :isSpecifiedBy :FaceTurningRoughing ;
+                                                                                   :hasDuration "0.111"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece> rdf:type owl:NamedIndividual ,
+                                                                                          <MachPP:FinalWorkpiece> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> rdf:type owl:NamedIndividual ,
+                                                                                            <MachPP:Task> ,
+                                                                                            :TurningOperation ;
+                                                                                   :hasInputRole :CuttingTool6Param ,
+                                                                                                 :Cyl_d13.8_l10.5 ;
+                                                                                   :hasOutputRole :HexPri_a14_l9 ;
+                                                                                   :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> ;
+                                                                                   :isSpecifiedBy :HexagonBroachingTurning ;
+                                                                                   :hasDuration "0.289"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> rdf:type owl:NamedIndividual ,
+                                                                                               <MachPP:Task> ,
+                                                                                               :DrillingOperation ,
+                                                                                               :TurningOperation ;
+                                                                                      :hasInputRole :CuttingTool2Param ,
+                                                                                                    :Cyl_d30.1_l47 ;
+                                                                                      :hasOutputRole :Conc_Cyl ;
+                                                                                      :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> ;
+                                                                                      :isSpecifiedBy :TurningDrilling ;
+                                                                                      :hasDuration "0.104"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill> rdf:type owl:NamedIndividual ,
+                                                                                         :Depth ;
+                                                                                :hasValue "-1.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill> rdf:type owl:NamedIndividual ,
+                                                                                         :Diameter ;
+                                                                                :hasValue "13.2"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> rdf:type owl:NamedIndividual ,
+                                                                                   <MachPP:Task> ,
+                                                                                   :Loading ;
+                                                                          :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> ;
+                                                                          :hasDuration "0.125"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> rdf:type owl:NamedIndividual ,
+                                                                                        <MachPP:Task> ,
+                                                                                        :MillingOperation ;
+                                                                               :hasInputRole :CuttingTool5Param ,
+                                                                                             :Cyl_d30_l47 ;
+                                                                               :hasOutputRole :GroovedCyl_Pri_l15_dp1_h1 ;
+                                                                               :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> ;
+                                                                               :isSpecifiedBy :FaceMilling ;
+                                                                               :hasDuration "0.289"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> rdf:type owl:NamedIndividual ,
+                                                                                                  <MachPP:Task> ,
+                                                                                                  :OpeningDoor ;
+                                                                                         :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> ;
+                                                                                         :isSpecifiedBy :AutomaticOperation ;
+                                                                                         :hasDuration "0.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill> rdf:type owl:NamedIndividual ,
+                                                                                          :Depth ;
+                                                                                 :hasValue "10.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill> rdf:type owl:NamedIndividual ,
+                                                                                          :Diameter ;
+                                                                                 :hasValue "13.6"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> rdf:type owl:NamedIndividual ,
+                                                                                                <MachPP:Task> ,
+                                                                                                :TurningOperation ;
+                                                                                       :hasInputRole :CuttingTool10Param ;
+                                                                                       :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> ;
+                                                                                       :isSpecifiedBy :ProfileTurningFinishing ;
+                                                                                       :hasDuration "0.554"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> rdf:type owl:NamedIndividual ,
+                                                                                               <MachPP:Task> ,
+                                                                                               :TurningOperation ;
+                                                                                      :hasInputRole :CuttingTool9Param ;
+                                                                                      :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> ;
+                                                                                      :isSpecifiedBy :ProfileTurningRoughing ;
+                                                                                      :hasDuration "0.278"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> rdf:type owl:NamedIndividual ,
+                                                                                        <MachPP:RawWorkpiece> ,
+                                                                                        <MachPP:Workpiece> ;
+                                                                               :madeFrom :C35 .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> rdf:type owl:NamedIndividual ,
+                                                                                         <MachPP:Task> ,
+                                                                                         :Repositioning ;
+                                                                                :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> ;
+                                                                                :isSpecifiedBy :RobotOperation ;
+                                                                                :hasDuration "0.25"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> rdf:type owl:NamedIndividual ,
+                                                                                             <MachPP:Task> ,
+                                                                                             :MachineOperation ;
+                                                                                    :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> ;
+                                                                                    :isSpecifiedBy :AutomaticOperation ;
+                                                                                    :hasDuration "0.12"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> rdf:type owl:NamedIndividual ,
+                                                                                              <MachPP:Task> ,
+                                                                                              :MachineOperation ;
+                                                                                     :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> ;
+                                                                                     :isSpecifiedBy :AutomaticOperation ;
+                                                                                     :hasDuration "0.089"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> rdf:type owl:NamedIndividual ,
+                                                                                        <MachPP:Task> ,
+                                                                                        :TurningOperation ;
+                                                                               :hasInputRole :CuttingTool11Param ;
+                                                                               :hasOutputRole <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece> ;
+                                                                               :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> ;
+                                                                               :isSpecifiedBy :M27ThreadingTurning ;
+                                                                               :hasDuration "0.184"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> rdf:type owl:NamedIndividual ,
+                                                                                        <MachPP:Task> ,
+                                                                                        :TurningOperation ;
+                                                                               :hasInputRole :CuttingTool4Param ,
+                                                                                             :Cyl_d30_l47 ;
+                                                                               :hasOutputRole :Hel_d30_l37_p3.5 ;
+                                                                               :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> ;
+                                                                               :isSpecifiedBy :M30ThreadingTurning ;
+                                                                               :hasDuration "0.216"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> rdf:type owl:NamedIndividual ,
+                                                                                                    <MachPP:Task> ,
+                                                                                                    :TurningOperation ;
+                                                                                           :hasInputRole :CuttingTool3Param ,
+                                                                                                         :Cyl_d30.1_l47 ,
+                                                                                                         :Cyl_d39.4_l28 ;
+                                                                                           :hasOutputRole :Cyl_d30_l47 ,
+                                                                                                          :Cyl_d39.4_l28 ;
+                                                                                           :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> ;
+                                                                                           :isSpecifiedBy :ExternalTurningFinishing ;
+                                                                                           :hasDuration "0.409"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> rdf:type owl:NamedIndividual ,
+                                                                                                   <MachPP:MachiningOperation> ,
+                                                                                                   <MachPP:Task> ,
+                                                                                                   :TurningOperation ;
+                                                                                          :hasInputRole :CuttingTool1Param ,
+                                                                                                        :Cyl_d32_l35 ,
+                                                                                                        :Cyl_d40.5_l36 ;
+                                                                                          :hasOutputRole :Cyl_d30.1_l47 ,
+                                                                                                         :Cyl_d39.4_l28 ;
+                                                                                          :hasSuccessor <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> ;
+                                                                                          :isSpecifiedBy :ExternalTurningRoughing ;
+                                                                                          :hasDuration "0.093"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> rdf:type owl:NamedIndividual ,
+                                                                                     <MachPP:Task> ,
+                                                                                     :Unloading ;
+                                                                            :hasDuration "0.125"^^xsd:float .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> rdf:type owl:NamedIndividual ,
+                                                                                        <MachPP:ManufacturingProcessPlan> ;
+                                                                               <https://w3id.org/pmd/co/composedof> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ> rdf:type owl:NamedIndividual ,
+                                                                                :RFQ ;
+                                                                       :isSpecificFor :Customer_A ;
+                                                                       <https://w3id.org/pmd/co/composedof> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <MachPP:FinalWorkpiece>
+                <MachPP:RawWorkpiece>
+                <MachPP:SemiFinalWorkpiece>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1338 @@
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP/1.0.0> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by/4.0/" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://purl.org/dc/elements/1.1/creator> "Beatriz Olarte Martinez" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://purl.org/dc/elements/1.1/description> "This ontology enables the mapping of machining process planning cards into the individual tasks that are required to produce a machined workpiece" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology developer in the framework of the EU project with the support of KMI in order to improve the retrieval of information from chip removal processes, especifically from the route cards or sheet cards" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/2000/01/rdf-schema#comment> "“This work was conducted using Protégé.” \nMusen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003." .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/2000/01/rdf-schema#label> "Machining Process Planning Ontology" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP> <http://www.w3.org/2002/07/owl#priorVersion> "None" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/pmd/co/input> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/pmd/co/output> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Task> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasUnit
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/pmd/co/composedof
+<https://w3id.org/pmd/co/composedof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/pmd/co/composedof> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# 
+# https://w3id.org/pmd/co/input
+<https://w3id.org/pmd/co/input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/pmd/co/output
+<https://w3id.org/pmd/co/output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GCode
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Workpiece> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDimensions
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDimensions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFinalGeometry
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFinalGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInitialGeometry
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInitialGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPeckDepth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPrice
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:ManufacturingProcessPlan> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasProjectNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit: N m (Newton metro)" .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# MachPP:CuttingTool
+<MachPP:CuttingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachineToolComponents> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Manufacturer> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Parameter> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:MachiningOperation> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isStoredIn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:MachiningOperation> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#performs> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:CuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <MachPP:Workpiece> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# MachPP:FinalWorkpiece
+<MachPP:FinalWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:FinalWorkpiece> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Workpiece> .
+# 
+# MachPP:Fixture
+<MachPP:Fixture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Fixture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachineToolComponents> .
+# 
+# MachPP:Geometry
+<MachPP:Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# MachPP:MachineTool
+<MachPP:MachineTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:MachineTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:MachineToolComponents> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:MachineTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Workpiece> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:MachineTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <MachPP:Manufacturer> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# MachPP:MachineToolComponents
+<MachPP:MachineToolComponents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# MachPP:MachiningOperation
+<MachPP:MachiningOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:MachiningOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Operation> .
+<MachPP:MachiningOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Workpiece> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#produces> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:MachiningOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Geometry> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#transforms> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# MachPP:Manufacturer
+<MachPP:Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/org#Organization> .
+# 
+# MachPP:ManufacturingProcessPlan
+<MachPP:ManufacturingProcessPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:ManufacturingProcessPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Task> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/composedof> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:ManufacturingProcessPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequences od machining operations to obtain a general objective" .
+# 
+# MachPP:Material
+<MachPP:Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# MachPP:Operation
+<MachPP:Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Operation> <http://www.w3.org/2000/01/rdf-schema#comment> "group of actions/task onthe same workpiece usually without changing set up" .
+# 
+# MachPP:Parameter
+<MachPP:Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# MachPP:RawWorkpiece
+<MachPP:RawWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:RawWorkpiece> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Workpiece> .
+# 
+# MachPP:SemiFinalWorkpiece
+<MachPP:SemiFinalWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:SemiFinalWorkpiece> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Workpiece> .
+# 
+# MachPP:Task
+<MachPP:Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Parameter> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Parameter> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Task> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPredecessor> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Task> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Operation> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Parameter> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/input> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Task> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the most granular unit of work, individual actions" .
+# 
+# MachPP:Workpiece
+<MachPP:Workpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<MachPP:Workpiece> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Fixture> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isFixedIn> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<MachPP:Workpiece> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:Material> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Fixture> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cone
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid25 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid26 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer> <http://www.w3.org/2004/02/skos/core#altLabel> "Buyer"@en .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "vc" .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachineToolComponents> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:CuttingTool> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachiningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "cutting length divided by spindle speed" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FeedRate> <http://www.w3.org/2000/01/rdf-schema#label> "f" .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Frustum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GangTooling
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GangTooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GangTooling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GeomParams
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GeomParams> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GeomParams> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid31 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachineTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWorkholding> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid34 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid35 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid36 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid37 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Operation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ManualOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ManualOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ManualOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Operation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Material> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MaterialRemoved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasThickness> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:CuttingTool> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachiningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#NumZ
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#NumZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#NumZ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#PeckDepth
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#PeckDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#PeckDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Geometry> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid39 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid40 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid41 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <MachPP:ManufacturingProcessPlan> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/composedof> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ> <http://www.w3.org/2000/01/rdf-schema#label> "Request for Quotation"@en .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Operation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachineToolComponents> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TheoreticalSurfaceFinished> <http://www.w3.org/2000/01/rdf-schema#label> "h" .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:CuttingTool> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <MachPP:MachiningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> <http://www.w3.org/2000/01/rdf-schema#label> "Turning" .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingToolStorage> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> .
+# 
+# https://www.w3.org/ns/org#Organization
+<https://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Material> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConF_d32_D40.5_l7.5
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConF_d32_D40.5_l7.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConF_d32_D40.5_l7.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ConicalFrustum> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> "47.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxDiameter> "30.1"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMinDiameter> "13.6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#cuts> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "XYZ" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.12"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "557.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "250.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "2.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "424.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "120.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.3"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "557.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "250.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.12"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "217.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "100.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.15"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "557.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "280.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "3.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> "471.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "15"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "120.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.18"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> "314.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "50.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.15"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "220.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "12.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "251.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "45.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.25"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "557.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "250.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:CuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasParameter> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasISOCode> "" .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumZ> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Parameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasFeedRate> "0.3"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpeed> "557.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasNumPasses> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasRecommendedSpeed> "250.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "13.8"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "10.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "30.1"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "47.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "30.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "47.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "32.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "35.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "39.4"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "28.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "40.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "36.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cylinder> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Prism> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylDia> "30.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasCylLength> "47.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDepth> "1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "15.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasWidth> "1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Helix> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDiameter> "30.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "47.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPitch> "3.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonalPrism> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasBaseEdge> "6.7"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasLength> "9.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonHole
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonHole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonHole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Mitsubishi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Manufacturer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Manufacturer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Lathe> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasComponent> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasManufacturer> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Okuma> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> "5000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower> "22000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> "427"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#millingCapacity> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYChuck
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYChuck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYChuck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Chuck> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxSpindleSpeed> "5000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasPower> "15"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasTorque> "240"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYSpindle2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Spindle> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OkumaLB3000MYTurret> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasMaxCuttingTool> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RoboticOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Sandvik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Manufacturer> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ClosingDoor> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool7Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingTailstock> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541DrillingTailstock> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.136"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool8Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.111"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:FinalWorkpiece> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool6Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d13.8_l10.5> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexPri_a14_l9> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#HexagonBroachingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.289"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#DrillingOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool2Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Conc_Cyl> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.104"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDepHexDrill> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> "-1.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541InDiaHexDrill> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> "13.2"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Loading> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.125"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MillingOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool5Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#GroovedCyl_Pri_l15_dp1_h1> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonBroaching> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#FaceMilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.289"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#OpeningDoor> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OpenDoorOkuma_LB3000MY> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Depth> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDepHexDrill> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> "10.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Diameter> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541OutDiaHexDrill> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasValue> "13.6"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool10Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.554"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool9Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileFinishTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ProfileTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ProfileRoughTurning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.278"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:RawWorkpiece> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Workpiece> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541RawWorkpiece> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#madeFrom> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#C35> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Repositioning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541CloseDoorOkumaLB3000MY> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RobotOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Repositioning> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.25"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FaceRoughTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelIn> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.12"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#MachineOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#AutomaticOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.089"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool11Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541FinalWorkpiece> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TailstockTravelOut> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M27ThreadingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM27> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.184"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool4Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Hel_d30_l37_p3.5> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541MillingYAxis> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#M30ThreadingTurning> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.216"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool3Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541ThreadingM30> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningFinishing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalFinishing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.409"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:MachiningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningOperation> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#CuttingTool1Param> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d32_l35> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasInputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d40.5_l36> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d30.1_l47> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasOutputRole> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Cyl_d39.4_l28> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasSuccessor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541HexagonHoleDrilling> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecifiedBy> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#ExternalTurningRoughing> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541TurningExternalRoughing> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.093"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:Task> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Unloading> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Unloading> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#hasDuration> "0.125"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <MachPP:ManufacturingProcessPlan> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> <https://w3id.org/pmd/co/composedof> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541Loading> .
+# 
+# http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#RFQ> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#isSpecificFor> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Customer_A> .
+<http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_RfQ> <https://w3id.org/pmd/co/composedof> <http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#582541_ProcessPlan> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid44 <http://www.w3.org/2002/07/owl#members> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <MachPP:SemiFinalWorkpiece> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <MachPP:RawWorkpiece> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <MachPP:FinalWorkpiece> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
