@@ -1,0 +1,56 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
+    "author" : [ "Beatriz Olarte Martinez" ],
+    "description" : {
+      "undefined" : "This ontology enables the mapping of machining process planning cards into the individual tasks that are required to produce a machined workpiece"
+    },
+    "labels" : {
+      "undefined" : "Machining Process Planning Ontology"
+    },
+    "comments" : {
+      "undefined" : "“This work was conducted using Protégé.” \nMusen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003."
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "None",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Beatriz Olarte Martinez",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret",
+    "baseIri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
+    "instances" : 0,
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool",
+    "baseIri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
+    "instances" : 0,
+    "id" : "1"
+  } ]
+}
