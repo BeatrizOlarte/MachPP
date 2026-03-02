@@ -1,0 +1,2910 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/MachPP#"
+     xml:base="https://w3id.org/MachPP"
+     xmlns:co="https://w3id.org/pmd/co/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:MachPP="https://www.w3id.org/MachPP#"
+     xmlns:resourceModel="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#"
+     xmlns:capabilityModel="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/MachPP">
+        <owl:versionIRI rdf:resource="MachPP:1.0.9"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl"/>
+        <owl:imports rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel"/>
+        <owl:imports rdf:resource="https://w3id.org/kg4cut/1.3.0"/>
+        <ns:license>https://creativecommons.org/licenses/by/4.0/</ns:license>
+        <dc:creator>Beatriz Olarte</dc:creator>
+        <dc:description xml:lang="en">This ontology contains information and knowledge required to produce machining tasks and processes. This information is normally contained in route cards, giving its fine granularity level, it is decomposed into machining tasks. MachPP allows mapping information from machining processes to route cards. Allowing the usage of manufacturing features as input and output to each machining task to link it to the machining specifications selected by experts. 
+The ontology is linked to MarCo ontology and kg4cut, enabling to map the assets requested by a full machine tending quote or even a final project.</dc:description>
+        <dc:title xml:lang="en">Machining Process Planning Ontology (MachPP)</dc:title>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <rdfs:comment>Ontology developer in the framework of the EU project DIGIMAN4.0 with the support of Polimill and KMI in order to improve the retrieval of information from chip removal processes, especifically from the route cards or sheet cards</rdfs:comment>
+        <rdfs:comment>“This work was conducted using Protégé.” 
+Musen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003.</rdfs:comment>
+        <rdfs:label>Machining Process Planning Ontology (MachPP)</rdfs:label>
+        <owl:priorVersion>1.0.0</owl:priorVersion>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/MachPP</dcat:accessURL>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#accessURL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/composedof -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/composedof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/input -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/input"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/output -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/output"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#cuts -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#cuts"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasInputRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasInputRole"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasManufacturer"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasOutputRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasOutputRole"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasParameter"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasPredecessor -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasPredecessor">
+        <owl:inverseOf rdf:resource="https://www.w3id.org/MachPP#hasSuccessor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasSuccessor -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasSuccessor"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasUnit"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasWorkholding -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#hasWorkholding"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#isFixedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#isFixedIn"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#isSpecificFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#isSpecificFor"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#isSpecifiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#isSpecifiedBy"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#isStoredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#isStoredIn"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#performs -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#performs"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#produces -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#produces"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#transforms -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/MachPP#transforms"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/MachPP#GCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#GCode"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#estimatesProduction -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#estimatesProduction">
+        <rdfs:comment>Number of workpieces machined per hour</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasBaseEdge -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasBaseEdge">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasCode">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasDepth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasDiameter -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasDiameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasDuration">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasFeedRate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasFeedRate">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasFinalGeometry -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasFinalGeometry"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasISOCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasISOCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasInitialGeometry -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasInitialGeometry"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasLength -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasLength">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasMaxCuttingTool -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasMaxCuttingTool">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingToolStorage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasMaxDiameter -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasMaxDiameter">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Chuck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasMaxSpeed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasMaxSpeed">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasMaxSpindleSpeed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasMaxSpindleSpeed">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Spindle"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasNumPasses -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasNumPasses">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasNumZ -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasNumZ">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasPeckDepth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasPeckDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasPitch -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasPitch">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasPower -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasPower">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Spindle"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasPrice">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasProjectNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasProjectNumber">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#ManufacturingProcessPlan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasRecommendedSpeed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasRecommendedSpeed">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasThickness -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#MaterialRemoved"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasTorque -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasTorque">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#Spindle"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#hasWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/MachPP#hasWidth">
+        <rdfs:domain rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#Inserting -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#Inserting">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#Moving -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#Moving">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#Picking -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#Picking">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#Placing -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#Placing">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#TransportFeeding -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#TransportFeeding">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://resourcedescription.tut.fi/ontology/capabilityModel#Transporting -->
+
+
+    <owl:Class rdf:about="http://resourcedescription.tut.fi/ontology/capabilityModel#Transporting">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">
+        <owl:equivalentClass rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualDevice"/>
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#MachineTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#SimpleCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Organization -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+        <owl:equivalentClass rdf:resource="https://www.w3.org/ns/org#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#BoxShape -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#BoxShape">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#Prism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#ConeShape -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#ConeShape">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#Cone"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Chamfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CylinderShape -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CylinderShape">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#PyramidShape -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#PyramidShape">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#Frustum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Chamfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#Material"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Device -->
+
+
+    <rdf:Description rdf:about="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasPrice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Chamfer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Chamfer"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/CuttingParameters -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/CuttingParameters">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/CuttingTool -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/CuttingTool">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/FinalGeometry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/FinalGeometry"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Hole -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Hole"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/MachineToolComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/MachineToolComponent">
+        <owl:equivalentClass rdf:resource="https://www.w3id.org/MachPP#MachineToolComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/MachiningTask -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/MachiningTask">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Plane -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Plane"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Pocket -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Pocket"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Shoulder -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Shoulder"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Slot -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Slot"/>
+    
+
+
+    <!-- https://w3id.org/kg4cut/Thread -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/Thread">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/kg4cut/FinalGeometry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/ToolType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/ToolType">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/kg4cut/3DProfile -->
+
+
+    <owl:Class rdf:about="https://w3id.org/kg4cut/3DProfile"/>
+    
+
+
+    <!-- https://www.w3.org/ns/org#Organization -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/org#Organization"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#BiddingQuote -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#BiddingQuote">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource"/>
+                <owl:someValuesFrom rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#cycleTime_average"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasPrice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A document that provide the cost and inclusions of a project created to suit customer requirements</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Chuck -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Chuck">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Fixture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ClosingDoor -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ClosingDoor">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <owl:disjointWith rdf:resource="https://www.w3id.org/MachPP#OpeningDoor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cone -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Cone">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ConeCavity -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ConeCavity">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Chamfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ConicalFrustum -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ConicalFrustum">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Frustum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasDiameter"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasLength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingSpeed -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#CuttingSpeed">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <rdfs:label>vc</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#CuttingTool">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#isSpecificFor"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#isStoredIn"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Turret"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#performs"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#cuts"/>
+                <owl:allValuesFrom rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingToolStorage -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#CuttingToolStorage">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineToolComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cylinder -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Cylinder">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasDiameter"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CylindricalCavity -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#CylindricalCavity">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Hole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#DrillingCuttingTool -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#DrillingCuttingTool">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#DrillingOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#DrillingOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ExternalFreeForm -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ExternalFreeForm">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/3DProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ExternalHelix -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ExternalHelix">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Thread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasDiameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasLength"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasPitch"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ExternalShape -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ExternalShape">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#FeedRate -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#FeedRate">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <rdfs:isDefinedBy>cutting length divided by spindle speed</rdfs:isDefinedBy>
+        <rdfs:label>f</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#FinalWorkpiece -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#FinalWorkpiece">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Fixture -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Fixture">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineToolComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Frustum -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Frustum">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#FrustumCavity -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#FrustumCavity">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Chamfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#GangTooling -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#GangTooling">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#CuttingToolStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#GeometricalShape -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#GeometricalShape"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#HexagonalPrism -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#HexagonalPrism">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Prism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasLength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#InternalFreeFormCavity -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#InternalFreeFormCavity">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/3DProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#InternalHelix -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#InternalHelix">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Thread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#InternalShape -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#InternalShape">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+        <rdfs:seeAlso>Internal surfaces created by the removal of the  material volumes inside the parts, generally can be called holes, but in manufacturing depending the shape has specific names called also features</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Lathe -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Lathe">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasWorkholding"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Chuck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MachineOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MachineOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MachineTendingBiddingQuote -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MachineTendingBiddingQuote">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#BiddingQuote"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource"/>
+                <owl:someValuesFrom rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#hasBasicResourceInformation"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#ManufacturingProcessPlan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MachineTool -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MachineTool">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#MachineToolComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasManufacturer"/>
+                <owl:allValuesFrom rdf:resource="https://www.w3id.org/MachPP#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Machine tool, any stationary power-driven machine that is used to shape or form parts made of metal or other materials. The shaping is accomplished in four general ways: (1) by cutting excess material in the form of chips from the part; (2) by shearing the material; (3) by squeezing metallic parts to the desired shape; and (4) by applying electricity, ultrasound, or corrosive chemicals to the material. The fourth category covers modern machine tools and processes for machining ultrahard metals not machinable by older methods [https://www.britannica.com/technology/machine-tool#ref39137].</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MachineToolComponent -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MachineToolComponent"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MachiningOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MachiningOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#produces"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#transforms"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#GeometricalShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ManualOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ManualOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Manufacturer -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Manufacturer">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/org#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ManufacturingProcessPlan -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#ManufacturingProcessPlan">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/composedof"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#estimatesProduction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Material -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Material"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MaterialRemoved -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MaterialRemoved">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Material"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MillingCuttingTool -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MillingCuttingTool">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#MillingOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#MillingOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#NumZ -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#NumZ">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OpeningDoor -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#OpeningDoor">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Operation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Operation">
+        <rdfs:comment xml:lang="en">Agregation of tasks related to manufacturing production</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Parameter -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Parameter">
+        <rdfs:subClassOf rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasFeedRate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasFeedRate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#PeckDepth -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#PeckDepth">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Prism -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Prism">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#ExternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasLength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasWidth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#PrismCavity -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#PrismCavity">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#InternalShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Pocket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/kg4cut/Slot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RawWorkpiece -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#RawWorkpiece">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RoboticLoading -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#RoboticLoading">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#RoboticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RoboticOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#RoboticOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RoboticRepositioning -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#RoboticRepositioning">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#RoboticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RoboticUnloading -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#RoboticUnloading">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#RoboticOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#SemiFinalWorkpiece -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#SemiFinalWorkpiece">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Spindle -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Spindle">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachineToolComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Task -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Task">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/input"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasInputRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasPredecessor"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasSuccessor"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#isSpecifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#hasDuration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Smallest level of granularity where it is possible to declare all the inputs required to obtain/create/produce the output</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#TheoreticalSurfaceFinished -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#TheoreticalSurfaceFinished">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <rdfs:label>h</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#TurningCuttingTool -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#TurningCuttingTool">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#TurningOperation -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#TurningOperation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdfs:label>Turning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Turret -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Turret">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/MachPP#CuttingToolStorage"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Workpiece -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/MachPP#Workpiece">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/composedof"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/MachPP#isFixedIn"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/MachPP#Fixture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/MachPP#AutomaticOperation -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#AutomaticOperation">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RoboticOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#C35 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#C35">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CloseDoorOkumaLB3000MY -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CloseDoorOkumaLB3000MY">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#ClosingDoor"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541DrillingTailstock"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#AutomaticOperation"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ConF_d32_D40.5_l7.5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ConF_d32_D40.5_l7.5">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#ConicalFrustum"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ControlUnitFanucR30 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ControlUnitFanucR30">
+        <rdf:type rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice"/>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool1">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:cuts rdf:resource="https://www.w3id.org/MachPP#582541RawWorkpiece"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool1Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#ExternalTurningRoughing"/>
+        <MachPP:hasISOCode>XYZ</MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool10 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool10">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool10Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#ProfileTurningFinishing"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool10Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool10Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541ProfileFinishTurning"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541ProfileFinishTurning"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">557.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool11 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool11">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Sandvik"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool11Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#M27ThreadingTurning"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool11Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool11Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM27"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM27"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">424.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool1Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool1Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">557.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool2">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Sandvik"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool2Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#TurningDrilling"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool2Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool2Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541HexagonHoleDrilling"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541HexagonHoleDrilling"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">217.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool3">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Sandvik"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool3Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#ExternalTurningFinishing"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool3Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool3Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.15</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">557.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">280.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool4 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool4">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool4Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#M30ThreadingTurning"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool4Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool4Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM30"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM30"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpindleSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">471.0</MachPP:hasMaxSpindleSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool5">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MillingCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Sandvik"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool5Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#FaceMilling"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool5Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool5Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541MillingYAxis"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541MillingYAxis"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.18</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpindleSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">314.0</MachPP:hasMaxSpindleSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool6 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool6">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool6Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#HexagonBroachingTurning"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool6Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool6Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541HexagonBroaching"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541HexagonBroaching"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.15</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">220.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool7 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool7">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#DrillingCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Sandvik"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool7Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#DrillingTailstock"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool7Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool7Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541DrillingTailstock"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541DrillingTailstock"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">251.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool8 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool8">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool8Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#FaceTurningRoughing"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool8Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool8Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541FaceRoughTurning"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541FaceRoughTurning"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.25</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">557.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool9 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool9">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#CuttingTool"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningCuttingTool"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Mitsubishi"/>
+        <MachPP:hasParameter rdf:resource="https://www.w3id.org/MachPP#CuttingTool9Param"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#ProfileTurningRoughing"/>
+        <MachPP:hasISOCode></MachPP:hasISOCode>
+        <MachPP:hasNumZ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#CuttingTool9Param -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#CuttingTool9Param">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Parameter"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541ProfileRoughTurning"/>
+        <MachPP:isSpecificFor rdf:resource="https://www.w3id.org/MachPP#582541ProfileRoughTurning"/>
+        <MachPP:hasFeedRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</MachPP:hasFeedRate>
+        <MachPP:hasMaxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">557.0</MachPP:hasMaxSpeed>
+        <MachPP:hasNumPasses rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MachPP:hasNumPasses>
+        <MachPP:hasRecommendedSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</MachPP:hasRecommendedSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d13.8_l10.5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d13.8_l10.5">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541HexagonHoleDrilling"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.8</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.5</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d30.1_l47 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d30.1_l47">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.1</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d30_l47 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d30_l47">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d32_l35 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d32_l35">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.0</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d39.4_l28 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d39.4_l28">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">39.4</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">28.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Cyl_d40.5_l36 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Cyl_d40.5_l36">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Cylinder"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.5</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#DoubleMagazineTable -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#DoubleMagazineTable">
+        <rdf:type rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualStorageDevice"/>
+        <MachPP:hasDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800.0</MachPP:hasDepth>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1200.0</MachPP:hasLength>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#DrillingTailstock -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#DrillingTailstock">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#DrillingOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ExternalTurningFinishing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ExternalTurningFinishing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ExternalTurningRoughing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ExternalTurningRoughing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#FaceMilling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#FaceMilling">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MillingOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#FaceTurningRoughing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#FaceTurningRoughing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Hel_d30_l37_p3.5 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Hel_d30_l37_p3.5">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#ExternalHelix"/>
+        <MachPP:hasDiameter rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</MachPP:hasDiameter>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.0</MachPP:hasLength>
+        <MachPP:hasPitch rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</MachPP:hasPitch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#HexPri_a14_l9 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#HexPri_a14_l9">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#HexagonalPrism"/>
+        <MachPP:hasBaseEdge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.7</MachPP:hasBaseEdge>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</MachPP:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#HexagonBroachingTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#HexagonBroachingTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#HexagonHole -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#HexagonHole">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Length -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Length"/>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#M27ThreadingTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#M27ThreadingTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#M30ThreadingTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#M30ThreadingTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Mitsubishi -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Mitsubishi">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Okuma -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Okuma">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000M -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000M">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Lathe"/>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000MY -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000MY">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Lathe"/>
+        <MachPP:hasComponent rdf:resource="https://www.w3id.org/MachPP#OkumaLB3000MY"/>
+        <MachPP:hasComponent rdf:resource="https://www.w3id.org/MachPP#OkumaLB3000MYSpindle"/>
+        <MachPP:hasComponent rdf:resource="https://www.w3id.org/MachPP#OkumaLB3000MYSpindle2"/>
+        <MachPP:hasManufacturer rdf:resource="https://www.w3id.org/MachPP#Okuma"/>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1500.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000MYChuck -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000MYChuck">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Chuck"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000MYSpindle -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000MYSpindle">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Spindle"/>
+        <MachPP:hasMaxSpindleSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</MachPP:hasMaxSpindleSpeed>
+        <MachPP:hasPower rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</MachPP:hasPower>
+        <MachPP:hasTorque rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</MachPP:hasTorque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000MYSpindle2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000MYSpindle2">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Spindle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OkumaLB3000MYTurret -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OkumaLB3000MYTurret">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Turret"/>
+        <MachPP:hasMaxCuttingTool rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</MachPP:hasMaxCuttingTool>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#OpenDoorOkuma_LB3000MY -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#OpenDoorOkuma_LB3000MY">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#OpeningDoor"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541Repositioning"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#AutomaticOperation"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Pri_l15_dp1_h1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Pri_l15_dp1_h1">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Prism"/>
+        <MachPP:hasDepth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</MachPP:hasDepth>
+        <MachPP:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</MachPP:hasLength>
+        <MachPP:hasWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</MachPP:hasWidth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ProfileTurningFinishing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ProfileTurningFinishing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#ProfileTurningRoughing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#ProfileTurningRoughing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RepositioningTower -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#RepositioningTower">
+        <rdf:type rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFixturingDevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RobotFanucM20i -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#RobotFanucM20i">
+        <rdf:type rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice"/>
+        <capabilityModel:payload rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</capabilityModel:payload>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#RobotOperation -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#RobotOperation">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RoboticOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#Sandvik -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#Sandvik">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#SchunkVacuumGripper -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#SchunkVacuumGripper">
+        <rdf:type rdf:resource="https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualGraspingDevice"/>
+        <MachPP:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</MachPP:hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#TurningDrilling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#TurningDrilling">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#DrillingOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541DrillingTailstock -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541DrillingTailstock">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#DrillingOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool7Param"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541TailstockTravelIn"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#DrillingTailstock"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.136</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541FaceRoughTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541FaceRoughTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool8Param"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541ProfileRoughTurning"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#FaceTurningRoughing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.111</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541FinalWorkpiece -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541FinalWorkpiece">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#FinalWorkpiece"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541HexagonBroaching -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541HexagonBroaching">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool6Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d13.8_l10.5"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#HexPri_a14_l9"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#OpenDoorOkuma_LB3000MY"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#HexagonBroachingTurning"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.289</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541HexagonHoleDrilling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541HexagonHoleDrilling">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#DrillingOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool2Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d13.8_l10.5"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541InDepHexDrill"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#582541InDiaHexDrill"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#582541OutDepHexDrill"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#582541OutDiaHexDrill"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#TurningDrilling"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.104</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541InDepHexDrill -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541InDepHexDrill">
+        <MachPP:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-1.0</MachPP:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541InDiaHexDrill -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541InDiaHexDrill">
+        <MachPP:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.2</MachPP:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541Loading -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541Loading">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RoboticLoading"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.125</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541MillingYAxis -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541MillingYAxis">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MillingOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool5Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Pri_l15_dp1_h1"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541HexagonBroaching"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#FaceMilling"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.289</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541OutDepHexDrill -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541OutDepHexDrill">
+        <MachPP:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</MachPP:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541OutDiaHexDrill -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541OutDiaHexDrill">
+        <MachPP:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.6</MachPP:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541ProfileFinishTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541ProfileFinishTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool10Param"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM27"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#ProfileTurningFinishing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.554</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541ProfileRoughTurning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541ProfileRoughTurning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool9Param"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541ProfileFinishTurning"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#ProfileTurningRoughing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.278</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541RawWorkpiece -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541RawWorkpiece">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RawWorkpiece"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Workpiece"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#C35"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541Repositioning -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541Repositioning">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RoboticRepositioning"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#CloseDoorOkumaLB3000MY"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#RobotOperation"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.25</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541TailstockTravelIn -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541TailstockTravelIn">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541FaceRoughTurning"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#AutomaticOperation"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.12</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541TailstockTravelOut -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541TailstockTravelOut">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541Unloading"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#AutomaticOperation"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.089</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541ThreadingM27 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541ThreadingM27">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool11Param"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541TailstockTravelOut"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#M27ThreadingTurning"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.184</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541ThreadingM30 -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541ThreadingM30">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool4Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d30_l47"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#Hel_d30_l37_p3.5"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541MillingYAxis"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#M30ThreadingTurning"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.216</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541TurningExternalFinishing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541TurningExternalFinishing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool3Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d30.1_l47"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d39.4_l28"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d30_l47"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d39.4_l28"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM30"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#ExternalTurningFinishing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.409</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541TurningExternalRoughing -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541TurningExternalRoughing">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachiningOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#TurningOperation"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#CuttingTool1Param"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d32_l35"/>
+        <MachPP:hasInputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d40.5_l36"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d30.1_l47"/>
+        <MachPP:hasOutputRole rdf:resource="https://www.w3id.org/MachPP#Cyl_d39.4_l28"/>
+        <MachPP:hasSuccessor rdf:resource="https://www.w3id.org/MachPP#582541HexagonHoleDrilling"/>
+        <MachPP:isSpecifiedBy rdf:resource="https://www.w3id.org/MachPP#ExternalTurningRoughing"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.093</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541Unloading -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541Unloading">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineOperation"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#RoboticUnloading"/>
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#Task"/>
+        <MachPP:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.125</MachPP:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541_ProcessPlan -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541_ProcessPlan">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#ManufacturingProcessPlan"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541DrillingTailstock"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541FaceRoughTurning"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541HexagonBroaching"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541HexagonHoleDrilling"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541Loading"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541MillingYAxis"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541ProfileFinishTurning"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541Repositioning"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541TailstockTravelIn"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541TailstockTravelOut"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM27"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541ThreadingM30"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalFinishing"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541TurningExternalRoughing"/>
+        <co:composedof rdf:resource="https://www.w3id.org/MachPP#582541Unloading"/>
+        <MachPP:estimatesProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#float">28.3</MachPP:estimatesProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/MachPP#582541_RoboticCell_Quote -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/MachPP#582541_RoboticCell_Quote">
+        <rdf:type rdf:resource="https://www.w3id.org/MachPP#MachineTendingBiddingQuote"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#ControlUnitFanucR30"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#DoubleMagazineTable"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#OkumaLB3000M"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#OkumaLB3000MY"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#RepositioningTower"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#RobotFanucM20i"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#SchunkVacuumGripper"/>
+        <resourceModel:containsResource rdf:resource="https://www.w3id.org/MachPP#582541_ProcessPlan"/>
+        <capabilityModel:cycleTime_average rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</capabilityModel:cycleTime_average>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/kg4cut/WorkpieceGeometry">
+        <rdfs:seeAlso>cm:ShapeAndSizeDefinition</rdfs:seeAlso>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.w3id.org/MachPP#FinalWorkpiece"/>
+            <rdf:Description rdf:about="https://www.w3id.org/MachPP#RawWorkpiece"/>
+            <rdf:Description rdf:about="https://www.w3id.org/MachPP#SemiFinalWorkpiece"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
