@@ -28,7 +28,7 @@ The ontology is linked to MarCo ontology and kg4cut, enabling to map the assets 
                                         """“This work was conducted using Protégé.” 
 Musen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003.""" ;
                            rdfs:label "Machining Process Planning Ontology (MachPP)" ;
-                           owl:priorVersion "1.0.9" ;
+                           owl:priorVersion "1.0.0" ;
                            <http://www.w3.org/ns/dcat#accessURL> "https://w3id.org/MachPP"^^xsd:anyURI .
 
 #################################################################

@@ -45,7 +45,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#cycleTime_average"
+    "@id" : "https://www.w3id.org/MachPP#hasPrice"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -54,19 +54,6 @@
 }, {
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasPrice"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
   } ],
@@ -74,7 +61,7 @@
     "@id" : "https://w3id.org/kg4cut/Chamfer"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -87,7 +74,7 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -100,7 +87,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasManufacturer"
@@ -109,13 +96,22 @@
     "@id" : "https://www.w3id.org/MachPP#Manufacturer"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Parameter"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#isSpecificFor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#MachiningOperation"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -130,22 +126,13 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#isSpecificFor"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://www.w3id.org/MachPP#MachiningOperation"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#isStoredIn"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Turret"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#performs"
@@ -154,7 +141,7 @@
     "@id" : "https://www.w3id.org/MachPP#MachiningOperation"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Workpiece"
@@ -163,7 +150,7 @@
     "@id" : "https://www.w3id.org/MachPP#cuts"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -176,7 +163,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
@@ -185,7 +172,7 @@
     "@id" : "https://w3id.org/kg4cut/Hole"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"
@@ -194,7 +181,7 @@
     "@id" : "https://w3id.org/kg4cut/3DProfile"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize"
@@ -203,7 +190,7 @@
     "@id" : "https://w3id.org/kg4cut/Thread"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasDiameter"
@@ -212,10 +199,19 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasPitch"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -233,22 +229,13 @@
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasPitch"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/kg4cut/Chamfer"
+    "@id" : "https://w3id.org/kg4cut/Pocket"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -261,7 +248,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
@@ -270,7 +257,7 @@
     "@id" : "https://w3id.org/kg4cut/3DProfile"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
@@ -279,7 +266,7 @@
     "@id" : "https://w3id.org/kg4cut/Thread"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasWorkholding"
@@ -288,7 +275,7 @@
     "@id" : "https://www.w3id.org/MachPP#Chuck"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource"
@@ -297,7 +284,7 @@
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#hasBasicResourceInformation"
@@ -306,7 +293,7 @@
     "@id" : "https://www.w3id.org/MachPP#ManufacturingProcessPlan"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasComponent"
@@ -315,13 +302,22 @@
     "@id" : "https://www.w3id.org/MachPP#MachineToolComponent"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Manufacturer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasManufacturer"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/kg4cut/performsTask"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -385,13 +381,44 @@
   "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#requiresResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/composedof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://purl.org/dc/terms/Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#performedBy"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -402,45 +429,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasFeedRate"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasFeedRate"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasDepth"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasLength"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -454,6 +442,45 @@
 }, {
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasFeedRate"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasDepth"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasLength"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
@@ -465,7 +492,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
@@ -474,7 +501,7 @@
     "@id" : "https://w3id.org/kg4cut/Pocket"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal"
@@ -483,7 +510,29 @@
     "@id" : "https://w3id.org/kg4cut/Slot"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/composedof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Operation"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://www.w3id.org/MachPP#ManufacturingProcessPlan"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#produces"
+  } ]
+}, {
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/pmd/co/input"
@@ -492,58 +541,13 @@
     "@id" : "https://www.w3id.org/MachPP#Parameter"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#hasInputRole"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Parameter"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasPredecessor"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://www.w3id.org/MachPP#Task"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasSuccessor"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://www.w3id.org/MachPP#Task"
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#isSpecifiedBy"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://www.w3id.org/MachPP#Operation"
-  } ]
-}, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://www.w3id.org/MachPP#hasDuration"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid59",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/pmd/co/composedof"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://www.w3id.org/MachPP#Material"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -558,13 +562,73 @@
   "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasPredecessor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasSuccessor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#isSpecifiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Operation"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasDuration"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/kg4cut/isMountedOnMachineTool"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/composedof"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Material"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://www.w3id.org/MachPP#isFixedIn"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://www.w3id.org/MachPP#Fixture"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid67",
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -606,6 +670,9 @@
   "@id" : "http://creativecommons.org/ns#license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -614,6 +681,9 @@
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -655,7 +725,6 @@
   } ]
 }, {
   "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource"
   } ],
@@ -667,45 +736,51 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://www.w3id.org/MachPP#MachineTool"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#SimpleCapability"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional"
   } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat#accessURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/org#Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/Agent"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://www.w3.org/ns/org#Organization"
   } ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/Agent"
+  } ]
+}, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#BoxShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid1"
   }, {
@@ -715,7 +790,14 @@
     "@id" : "https://www.w3id.org/MachPP#Prism"
   } ]
 }, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#ConeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid3"
   }, {
@@ -728,6 +810,7 @@
   } ]
 }, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CylinderShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid6"
   }, {
@@ -738,6 +821,7 @@
   } ]
 }, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#PyramidShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid8"
   }, {
@@ -749,15 +833,75 @@
     "@id" : "https://www.w3id.org/MachPP#Frustum"
   } ]
 }, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#SimpleCapability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#cycleTime_average",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#payload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType",
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://www.w3id.org/MachPP#Material"
   } ]
 }, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#BlindRiveting",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#BulkBoxFeeding",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#Fixturing",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#Hammering",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/MachPP#Task"
+  } ]
+}, {
   "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid11"
   } ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFixturingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualGraspingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualStorageDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#hasBasicResourceInformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/MachPP",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -795,63 +939,40 @@
     "@id" : "https://w3id.org/kg4cut/1.3.0"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@value" : "1.0.0"
+    "@value" : "1.0.9"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "MachPP:1.0.9"
+    "@id" : "MachPP:1.0.12"
   } ],
   "http://www.w3.org/ns/dcat#accessURL" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "https://w3id.org/MachPP"
   } ]
 }, {
-  "@id" : "https://w3id.org/kg4cut/3DProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/kg4cut/Chamfer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://w3id.org/kg4cut/CuttingParameters",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Parameter"
   } ]
 }, {
   "@id" : "https://w3id.org/kg4cut/CuttingTool",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://www.w3id.org/MachPP#CuttingTool"
   } ]
 }, {
-  "@id" : "https://w3id.org/kg4cut/FinalGeometry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/kg4cut/Hole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://w3id.org/kg4cut/MachineToolComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://www.w3id.org/MachPP#MachineToolComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/kg4cut/MachiningTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Task"
   } ]
 }, {
-  "@id" : "https://w3id.org/kg4cut/Plane",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/kg4cut/Pocket",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/kg4cut/Shoulder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/kg4cut/Slot",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "https://w3id.org/kg4cut/MillingTool",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://www.w3id.org/MachPP#MillingCuttingTool"
+  } ]
 }, {
   "@id" : "https://w3id.org/kg4cut/Thread",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -860,7 +981,6 @@
   } ]
 }, {
   "@id" : "https://w3id.org/kg4cut/ToolType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability"
   } ]
@@ -868,6 +988,25 @@
   "@id" : "https://w3id.org/kg4cut/WorkpieceGeometry",
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "cm:ShapeAndSizeDefinition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kg4cut/hasInput",
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/input"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#hasInputRole"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kg4cut/hasLength",
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3id.org/MachPP#hasLength"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kg4cut/hasOutput",
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/pmd/co/output"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#hasOutputRole"
   } ]
 }, {
   "@id" : "https://w3id.org/pmd/co/composedof",
@@ -883,7 +1022,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://www.w3.org/ns/org#Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/Agent"
+  } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#582541DrillingTailstock",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
@@ -935,6 +1077,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://www.w3id.org/MachPP#FinalWorkpiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is a cylindrical shape that contains some threads inner and outer"
+  } ],
+  "https://w3id.org/kg4cut/hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "64.0"
+  } ],
+  "https://w3id.org/kg4cut/hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "200.0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#582541HexagonBroaching",
@@ -1123,6 +1276,9 @@
     "@id" : "https://www.w3id.org/MachPP#RawWorkpiece"
   }, {
     "@id" : "https://www.w3id.org/MachPP#Workpiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is a cylindrical shape"
   } ],
   "https://w3id.org/pmd/co/composedof" : [ {
     "@id" : "https://www.w3id.org/MachPP#C35"
@@ -1350,6 +1506,9 @@
   "https://www.w3id.org/MachPP#estimatesProduction" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "28.3"
+  } ],
+  "https://www.w3id.org/MachPP#produces" : [ {
+    "@id" : "https://www.w3id.org/MachPP#582541FinalWorkpiece"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#582541_RoboticCell_Quote",
@@ -1377,6 +1536,100 @@
     "@id" : "https://www.w3id.org/MachPP#SchunkVacuumGripper"
   }, {
     "@id" : "https://www.w3id.org/MachPP#582541_ProcessPlan"
+  } ],
+  "https://www.w3id.org/MachPP#estimatesProduction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "7000.0"
+  } ],
+  "https://www.w3id.org/MachPP#produces" : [ {
+    "@id" : "https://www.w3id.org/MachPP#582541FinalWorkpiece"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#AR2497_FinalWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/MachPP#FinalWorkpiece"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#AR2497_ProcessPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/MachPP#ManufacturingProcessPlan"
+  } ],
+  "https://w3id.org/kg4cut/machines" : [ {
+    "@id" : "https://www.w3id.org/MachPP#AR2497_Removed"
+  } ],
+  "https://www.w3id.org/MachPP#estimatesProduction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "30.4"
+  } ],
+  "https://www.w3id.org/MachPP#produces" : [ {
+    "@id" : "https://www.w3id.org/MachPP#AR2497_FinalWorkpiece"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#AR2497_RawWorkpiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/MachPP#RawWorkpiece"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It looks like a cylinder with just one base"
+  } ],
+  "https://w3id.org/kg4cut/hasDiameter" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "74.0"
+  } ],
+  "https://www.w3id.org/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "57.0"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#AR2497_Removed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/MachPP#MaterialRemoved"
+  } ],
+  "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#volume" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "50.0"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#AR2497_RoboticCell_Quote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/MachPP#MachineTendingBiddingQuote"
+  } ],
+  "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource" : [ {
+    "@id" : "https://www.w3id.org/MachPP#AR2497_ProcessPlan"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#CarouselConveyor-14-Pallets"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#CleaningStation"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#ControlUnitFanuc3PHT"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#MeasuringStationRenishaw"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#Okuma2SP-35H"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#OpticalBarrier"
+  }, {
+    "@id" : "https://www.w3id.org/MachPP#WorkpieceControlSlide"
+  } ],
+  "https://www.w3id.org/MachPP#estimatesProduction" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "6000.0"
+  } ],
+  "https://www.w3id.org/MachPP#hasDepth" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "3350.0"
+  } ],
+  "https://www.w3id.org/MachPP#hasLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "6480.0"
+  } ],
+  "https://www.w3id.org/MachPP#produces" : [ {
+    "@id" : "https://www.w3id.org/MachPP#AR2497_FinalWorkpiece"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#AutomaticOperation",
@@ -1393,11 +1646,11 @@
     "@value" : "A document that provide the cost and inclusions of a project created to suit customer requirements"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.semanticweb.owlapi/error#Error1"
+  }, {
     "@id" : "_:genid12"
   }, {
     "@id" : "_:genid13"
-  }, {
-    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#C35",
@@ -1406,10 +1659,27 @@
     "@id" : "https://www.w3id.org/MachPP#Material"
   } ]
 }, {
+  "@id" : "https://www.w3id.org/MachPP#CarouselConveyor-14-Pallets",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice"
+  } ],
+  "https://www.w3id.org/MachPP#hasPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "120.0"
+  } ]
+}, {
   "@id" : "https://www.w3id.org/MachPP#Chuck",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Fixture"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#CleaningStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#RealDeviceCombination" ],
+  "https://www.w3id.org/MachPP#hasPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "100.0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#CloseDoorOkumaLB3000MY",
@@ -1456,7 +1726,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#ConicalFrustum",
@@ -1464,13 +1734,26 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Frustum"
   }, {
-    "@id" : "_:genid16"
+    "@id" : "_:genid15"
   }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#ControlUnitFanuc3PHT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice"
+  } ],
+  "https://www.w3id.org/MachPP#hasPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "300.0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#ControlUnitFanucR30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice"
+  } ],
   "https://www.w3id.org/MachPP#hasPrice" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "500.0"
@@ -1488,6 +1771,8 @@
   "@id" : "https://www.w3id.org/MachPP#CuttingTool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid17"
+  }, {
     "@id" : "_:genid18"
   }, {
     "@id" : "_:genid19"
@@ -1497,8 +1782,6 @@
     "@id" : "_:genid21"
   }, {
     "@id" : "_:genid22"
-  }, {
-    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#CuttingTool1",
@@ -2186,7 +2469,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#ExternalShape"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#CylindricalCavity",
@@ -2194,11 +2477,14 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#DoubleMagazineTable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualStorageDevice" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualStorageDevice"
+  } ],
   "https://www.w3id.org/MachPP#hasDepth" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "800.0"
@@ -2237,7 +2523,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#ExternalShape"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#ExternalHelix",
@@ -2245,13 +2531,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#ExternalShape"
   }, {
+    "@id" : "_:genid26"
+  }, {
     "@id" : "_:genid27"
   }, {
     "@id" : "_:genid28"
   }, {
     "@id" : "_:genid29"
-  }, {
-    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#ExternalShape",
@@ -2319,7 +2605,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#GCode",
@@ -2383,7 +2669,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Prism"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#InternalFreeFormCavity",
@@ -2391,7 +2677,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#InternalHelix",
@@ -2399,7 +2685,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#InternalShape",
@@ -2416,7 +2702,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#MachineTool"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#Length",
@@ -2445,9 +2731,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#BiddingQuote"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#MachineTool",
@@ -2459,9 +2745,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualDevice"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid37"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#MachineToolComponent",
@@ -2471,6 +2757,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#Operation"
+  }, {
+    "@id" : "_:genid39"
   }, {
     "@id" : "_:genid40"
   }, {
@@ -2491,6 +2779,9 @@
 }, {
   "@id" : "https://www.w3id.org/MachPP#ManufacturingProcessPlan",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In machining, it is the document that compile all the information related to the manufacturing process of a workpiece"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid42"
   }, {
@@ -2506,6 +2797,13 @@
     "@id" : "https://www.w3id.org/MachPP#Material"
   }, {
     "@id" : "_:genid44"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#MeasuringStationRenishaw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#RealDeviceCombination" ],
+  "https://www.w3id.org/MachPP#hasPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "300.0"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#MillingCuttingTool",
@@ -2536,6 +2834,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://www.w3id.org/MachPP#Manufacturer"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#Okuma2SP-35H",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Double spindle lathe"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#OkumaLB3000M",
@@ -2637,18 +2944,28 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Agregation of tasks related to manufacturing production"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
   } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#OpticalBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualSimpleDevice" ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional"
   }, {
-    "@id" : "_:genid45"
+    "@id" : "_:genid48"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid47"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#PeckDepth",
@@ -2680,11 +2997,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#ExternalShape"
   }, {
-    "@id" : "_:genid48"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid52"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#PrismCavity",
@@ -2692,9 +3009,17 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3id.org/MachPP#InternalShape"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid55"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#Process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid56"
+  }, {
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#ProfileTurningFinishing",
@@ -2716,10 +3041,16 @@
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#RepositioningTower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFixturingDevice" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFixturingDevice"
+  } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#RobotFanucM20i",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice"
+  } ],
   "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#payload" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "20.0"
@@ -2727,6 +3058,12 @@
   "https://www.w3id.org/MachPP#hasPrice" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "1000.0"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#RobotFanucM710-50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#RobotOperation",
@@ -2766,7 +3103,10 @@
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#SchunkVacuumGripper",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualGraspingDevice" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualGraspingDevice"
+  } ],
   "https://www.w3id.org/MachPP#hasPrice" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "500.0"
@@ -2791,17 +3131,17 @@
     "@value" : "Smallest level of granularity where it is possible to declare all the inputs required to obtain/create/produce the output"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid53"
-  }, {
-    "@id" : "_:genid54"
-  }, {
-    "@id" : "_:genid55"
-  }, {
-    "@id" : "_:genid56"
-  }, {
-    "@id" : "_:genid57"
-  }, {
     "@id" : "_:genid58"
+  }, {
+    "@id" : "_:genid59"
+  }, {
+    "@id" : "_:genid60"
+  }, {
+    "@id" : "_:genid61"
+  }, {
+    "@id" : "_:genid62"
+  }, {
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#TheoreticalSurfaceFinished",
@@ -2847,9 +3187,17 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid64"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid65"
+  }, {
+    "@id" : "_:genid66"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#WorkpieceControlSlide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualToolingDevice" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice"
   } ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#cuts",
@@ -3119,6 +3467,18 @@
   "@id" : "https://www.w3id.org/MachPP#isFixedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
+  "@id" : "https://www.w3id.org/MachPP#isRecommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#isRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf"
+  } ]
+}, {
   "@id" : "https://www.w3id.org/MachPP#isSpecificFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -3126,6 +3486,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#isStoredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/MachPP#performedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://www.w3id.org/MachPP#performs",
