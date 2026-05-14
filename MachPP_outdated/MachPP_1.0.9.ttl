@@ -1,0 +1,1782 @@
+@prefix : <https://www.w3id.org/MachPP/> .
+@prefix cm: <https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#> .
+@prefix co: <https://w3id.org/pmd/co/> .
+@prefix odp: <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> .
+@prefix org: <https://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix marco: <https://resourcedescription.rd.tuni.fi/ontology/resourceModel#> .
+@prefix MachPP: <https://www.w3id.org/MachPP#> .
+@prefix kg4cut: <https://w3id.org/kg4cut/> .
+@base <https://www.w3id.org/MachPP/> .
+
+<https://w3id.org/MachPP> rdf:type owl:Ontology ;
+                           owl:versionIRI <MachPP:1.0.9> ;
+                           owl:imports <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> ,
+                                       <https://resourcedescription.rd.tuni.fi/ontology/resourceModel> ,
+                                       <https://w3id.org/kg4cut/1.3.0> ;
+                           <http://creativecommons.org/ns#license> "https://creativecommons.org/licenses/by/4.0/" ;
+                           <http://purl.org/dc/elements/1.1/creator> "Beatriz Olarte" ;
+                           <http://purl.org/dc/elements/1.1/description> """This ontology contains information and knowledge required to produce machining tasks and processes. This information is normally contained in route cards, giving its fine granularity level, it is decomposed into machining tasks. MachPP allows mapping information from machining processes to route cards. Allowing the usage of manufacturing features as input and output to each machining task to link it to the machining specifications selected by experts. 
+The ontology is linked to MarCo ontology and kg4cut, enabling to map the assets requested by a full machine tending quote or even a final project."""@en ;
+                           <http://purl.org/dc/elements/1.1/title> "Machining Process Planning Ontology (MachPP)"@en ;
+                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+                           rdfs:comment "Ontology developer in the framework of the EU project DIGIMAN4.0 with the support of Polimill and KMI in order to improve the retrieval of information from chip removal processes, especifically from the route cards or sheet cards" ,
+                                        """“This work was conducted using Protégé.” 
+Musen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003.""" ;
+                           rdfs:label "Machining Process Planning Ontology (MachPP)" ;
+                           owl:priorVersion "1.0.0" ;
+                           <http://www.w3.org/ns/dcat#accessURL> "https://w3id.org/MachPP"^^xsd:anyURI .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#accessURL
+<http://www.w3.org/ns/dcat#accessURL> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/kg4cut/hasInput
+kg4cut:hasInput owl:equivalentProperty co:input ,
+                                       MachPP:hasInputRole .
+
+
+###  https://w3id.org/kg4cut/hasOutput
+kg4cut:hasOutput owl:equivalentProperty co:output ,
+                                        MachPP:hasOutputRole .
+
+
+###  https://w3id.org/pmd/co/composedof
+co:composedof rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/pmd/co/input
+co:input rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/output
+co:output rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#cuts
+MachPP:cuts rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasComponent
+MachPP:hasComponent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> .
+
+
+###  https://www.w3id.org/MachPP#hasInputRole
+MachPP:hasInputRole rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasManufacturer
+MachPP:hasManufacturer rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasOutputRole
+MachPP:hasOutputRole rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasParameter
+MachPP:hasParameter rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasPredecessor
+MachPP:hasPredecessor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf MachPP:hasSuccessor .
+
+
+###  https://www.w3id.org/MachPP#hasSuccessor
+MachPP:hasSuccessor rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasUnit
+MachPP:hasUnit rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#hasWorkholding
+MachPP:hasWorkholding rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#isFixedIn
+MachPP:isFixedIn rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#isSpecificFor
+MachPP:isSpecificFor rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#isSpecifiedBy
+MachPP:isSpecifiedBy rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#isStoredIn
+MachPP:isStoredIn rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#performs
+MachPP:performs rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#produces
+MachPP:produces rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/MachPP#transforms
+MachPP:transforms rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/kg4cut/hasLength
+kg4cut:hasLength owl:equivalentProperty MachPP:hasLength .
+
+
+###  https://www.w3id.org/MachPP#GCode
+MachPP:GCode rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/MachPP#estimatesProduction
+MachPP:estimatesProduction rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Number of workpieces machined per hour" .
+
+
+###  https://www.w3id.org/MachPP#hasBaseEdge
+MachPP:hasBaseEdge rdf:type owl:DatatypeProperty ;
+                   rdfs:domain MachPP:GeometricalShape ;
+                   rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasCode
+MachPP:hasCode rdf:type owl:DatatypeProperty ;
+               rdfs:domain MachPP:Workpiece ;
+               rdfs:range xsd:string .
+
+
+###  https://www.w3id.org/MachPP#hasDepth
+MachPP:hasDepth rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain MachPP:GeometricalShape ;
+                rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasDiameter
+MachPP:hasDiameter rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain MachPP:GeometricalShape ;
+                   rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasDuration
+MachPP:hasDuration rdf:type owl:DatatypeProperty ;
+                   rdfs:domain MachPP:Task ;
+                   rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasFeedRate
+MachPP:hasFeedRate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain MachPP:CuttingTool ;
+                   rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasFinalGeometry
+MachPP:hasFinalGeometry rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/MachPP#hasISOCode
+MachPP:hasISOCode rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain MachPP:CuttingTool ;
+                  rdfs:range xsd:string .
+
+
+###  https://www.w3id.org/MachPP#hasInitialGeometry
+MachPP:hasInitialGeometry rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/MachPP#hasLength
+MachPP:hasLength rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasMaxCuttingTool
+MachPP:hasMaxCuttingTool rdf:type owl:DatatypeProperty ;
+                         rdfs:domain MachPP:CuttingToolStorage ;
+                         rdfs:range xsd:integer .
+
+
+###  https://www.w3id.org/MachPP#hasMaxDiameter
+MachPP:hasMaxDiameter rdf:type owl:DatatypeProperty ;
+                      rdfs:domain MachPP:Chuck ;
+                      rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasMaxSpeed
+MachPP:hasMaxSpeed rdf:type owl:DatatypeProperty ;
+                   rdfs:domain MachPP:CuttingTool ;
+                   rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasMaxSpindleSpeed
+MachPP:hasMaxSpindleSpeed rdf:type owl:DatatypeProperty ;
+                          rdfs:domain MachPP:Spindle .
+
+
+###  https://www.w3id.org/MachPP#hasNumPasses
+MachPP:hasNumPasses rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain MachPP:CuttingTool ;
+                    rdfs:range xsd:integer .
+
+
+###  https://www.w3id.org/MachPP#hasNumZ
+MachPP:hasNumZ rdf:type owl:DatatypeProperty ;
+               rdfs:domain MachPP:CuttingTool ;
+               rdfs:range xsd:integer .
+
+
+###  https://www.w3id.org/MachPP#hasPeckDepth
+MachPP:hasPeckDepth rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain MachPP:CuttingTool ;
+                    rdfs:range xsd:integer .
+
+
+###  https://www.w3id.org/MachPP#hasPitch
+MachPP:hasPitch rdf:type owl:DatatypeProperty ;
+                rdfs:domain MachPP:GeometricalShape ;
+                rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasPower
+MachPP:hasPower rdf:type owl:DatatypeProperty ;
+                rdfs:domain MachPP:Spindle .
+
+
+###  https://www.w3id.org/MachPP#hasPrice
+MachPP:hasPrice rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasProjectNumber
+MachPP:hasProjectNumber rdf:type owl:DatatypeProperty ;
+                        rdfs:domain MachPP:ManufacturingProcessPlan ;
+                        rdfs:range xsd:string .
+
+
+###  https://www.w3id.org/MachPP#hasRecommendedSpeed
+MachPP:hasRecommendedSpeed rdf:type owl:DatatypeProperty ;
+                           rdfs:domain MachPP:CuttingTool ;
+                           rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasThickness
+MachPP:hasThickness rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain MachPP:MaterialRemoved ;
+                    rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasTorque
+MachPP:hasTorque rdf:type owl:DatatypeProperty ;
+                 rdfs:domain MachPP:Spindle .
+
+
+###  https://www.w3id.org/MachPP#hasValue
+MachPP:hasValue rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:float .
+
+
+###  https://www.w3id.org/MachPP#hasWidth
+MachPP:hasWidth rdf:type owl:DatatypeProperty ;
+                rdfs:domain MachPP:GeometricalShape ;
+                rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#Inserting
+<http://resourcedescription.tut.fi/ontology/capabilityModel#Inserting> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf MachPP:Task .
+
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#Moving
+<http://resourcedescription.tut.fi/ontology/capabilityModel#Moving> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf MachPP:Task .
+
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#Picking
+<http://resourcedescription.tut.fi/ontology/capabilityModel#Picking> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf MachPP:Task .
+
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#Placing
+<http://resourcedescription.tut.fi/ontology/capabilityModel#Placing> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf MachPP:Task .
+
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#TransportFeeding
+<http://resourcedescription.tut.fi/ontology/capabilityModel#TransportFeeding> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf MachPP:Task .
+
+
+###  http://resourcedescription.tut.fi/ontology/capabilityModel#Transporting
+<http://resourcedescription.tut.fi/ontology/capabilityModel#Transporting> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf MachPP:Task .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> owl:equivalentClass marco:IndividualDevice ;
+                                                                     rdfs:subClassOf marco:Resource .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile
+<http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile> rdfs:subClassOf cm:Capability .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool
+<http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool> owl:equivalentClass MachPP:MachineTool .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand
+<http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand> rdfs:subClassOf cm:Capability .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction
+<http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction> rdfs:subClassOf cm:SimpleCapability .
+
+
+###  http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure
+<http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure> rdfs:subClassOf cm:CapabilityParameterAdditional .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> owl:equivalentClass org:Organization .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#BoxShape
+cm:BoxShape owl:equivalentClass MachPP:Prism ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cm:hasShapeAndSize ;
+                              owl:someValuesFrom kg4cut:Plane
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cm:hasShapeAndSize ;
+                              owl:someValuesFrom kg4cut:Shoulder
+                            ] .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#ConeShape
+cm:ConeShape owl:equivalentClass MachPP:Cone ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cm:hasShapeAndSize ;
+                               owl:someValuesFrom kg4cut:Chamfer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cm:hasShapeAndSize ;
+                               owl:someValuesFrom kg4cut:Plane
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cm:hasShapeAndSize ;
+                               owl:someValuesFrom kg4cut:Shoulder
+                             ] .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CylinderShape
+cm:CylinderShape owl:equivalentClass MachPP:Cylinder ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty cm:hasShapeAndSize ;
+                                   owl:someValuesFrom kg4cut:Plane
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cm:hasShapeAndSize ;
+                                   owl:someValuesFrom kg4cut:Shoulder
+                                 ] .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#PyramidShape
+cm:PyramidShape owl:equivalentClass MachPP:Frustum ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty cm:hasShapeAndSize ;
+                                  owl:someValuesFrom kg4cut:Chamfer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cm:hasShapeAndSize ;
+                                  owl:someValuesFrom kg4cut:Plane
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cm:hasShapeAndSize ;
+                                  owl:someValuesFrom kg4cut:Shoulder
+                                ] .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType
+<https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType> owl:equivalentClass MachPP:Material .
+
+
+###  https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Device
+marco:Device rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty MachPP:hasPrice ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] .
+
+
+###  https://w3id.org/kg4cut/CuttingParameters
+kg4cut:CuttingParameters rdfs:subClassOf MachPP:Parameter .
+
+
+###  https://w3id.org/kg4cut/CuttingTool
+kg4cut:CuttingTool owl:equivalentClass MachPP:CuttingTool .
+
+
+###  https://w3id.org/kg4cut/MachineToolComponent
+kg4cut:MachineToolComponent owl:equivalentClass MachPP:MachineToolComponent .
+
+
+###  https://w3id.org/kg4cut/MachiningTask
+kg4cut:MachiningTask rdfs:subClassOf MachPP:Task .
+
+
+###  https://w3id.org/kg4cut/Thread
+kg4cut:Thread rdf:type owl:Class ;
+              rdfs:subClassOf kg4cut:FinalGeometry .
+
+
+###  https://w3id.org/kg4cut/ToolType
+kg4cut:ToolType rdfs:subClassOf cm:Capability .
+
+
+###  https://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class .
+
+
+###  https://www.w3id.org/MachPP#BiddingQuote
+MachPP:BiddingQuote rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty marco:containsResource ;
+                                      owl:someValuesFrom marco:Resource
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cm:cycleTime_average ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:float
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty MachPP:hasPrice ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:float
+                                    ] ;
+                    rdfs:comment "A document that provide the cost and inclusions of a project created to suit customer requirements" .
+
+
+###  https://www.w3id.org/MachPP#Chuck
+MachPP:Chuck rdf:type owl:Class ;
+             rdfs:subClassOf MachPP:Fixture .
+
+
+###  https://www.w3id.org/MachPP#ClosingDoor
+MachPP:ClosingDoor rdf:type owl:Class ;
+                   rdfs:subClassOf MachPP:MachineOperation ;
+                   owl:disjointWith MachPP:OpeningDoor .
+
+
+###  https://www.w3id.org/MachPP#Cone
+MachPP:Cone rdf:type owl:Class ;
+            rdfs:subClassOf MachPP:ExternalShape .
+
+
+###  https://www.w3id.org/MachPP#ConeCavity
+MachPP:ConeCavity rdf:type owl:Class ;
+                  rdfs:subClassOf MachPP:InternalShape ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty cm:hasShapeAndSize_internal ;
+                                    owl:someValuesFrom kg4cut:Chamfer
+                                  ] .
+
+
+###  https://www.w3id.org/MachPP#ConicalFrustum
+MachPP:ConicalFrustum rdf:type owl:Class ;
+                      rdfs:subClassOf MachPP:Frustum ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty MachPP:hasDiameter ;
+                                        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:float
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty MachPP:hasLength ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:float
+                                      ] .
+
+
+###  https://www.w3id.org/MachPP#CuttingSpeed
+MachPP:CuttingSpeed rdf:type owl:Class ;
+                    rdfs:subClassOf MachPP:Parameter ;
+                    rdfs:label "vc" .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool
+MachPP:CuttingTool rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:hasManufacturer ;
+                                     owl:someValuesFrom MachPP:Manufacturer
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:hasParameter ;
+                                     owl:someValuesFrom MachPP:Parameter
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:isSpecificFor ;
+                                     owl:someValuesFrom MachPP:MachiningOperation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:isStoredIn ;
+                                     owl:someValuesFrom MachPP:Turret
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:performs ;
+                                     owl:someValuesFrom MachPP:MachiningOperation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:cuts ;
+                                     owl:allValuesFrom MachPP:Workpiece
+                                   ] .
+
+
+###  https://www.w3id.org/MachPP#CuttingToolStorage
+MachPP:CuttingToolStorage rdf:type owl:Class ;
+                          rdfs:subClassOf MachPP:MachineToolComponent .
+
+
+###  https://www.w3id.org/MachPP#Cylinder
+MachPP:Cylinder rdf:type owl:Class ;
+                rdfs:subClassOf MachPP:ExternalShape ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty MachPP:hasDiameter ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:float
+                                ] .
+
+
+###  https://www.w3id.org/MachPP#CylindricalCavity
+MachPP:CylindricalCavity rdf:type owl:Class ;
+                         rdfs:subClassOf MachPP:InternalShape ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cm:hasShapeAndSize_internal ;
+                                           owl:someValuesFrom kg4cut:Hole
+                                         ] .
+
+
+###  https://www.w3id.org/MachPP#DrillingCuttingTool
+MachPP:DrillingCuttingTool rdf:type owl:Class ;
+                           rdfs:subClassOf MachPP:CuttingTool .
+
+
+###  https://www.w3id.org/MachPP#DrillingOperation
+MachPP:DrillingOperation rdf:type owl:Class ;
+                         rdfs:subClassOf MachPP:MachiningOperation .
+
+
+###  https://www.w3id.org/MachPP#ExternalFreeForm
+MachPP:ExternalFreeForm rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:ExternalShape ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty cm:hasShapeAndSize ;
+                                          owl:someValuesFrom <https://w3id.org/kg4cut/3DProfile>
+                                        ] .
+
+
+###  https://www.w3id.org/MachPP#ExternalHelix
+MachPP:ExternalHelix rdf:type owl:Class ;
+                     rdfs:subClassOf MachPP:ExternalShape ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cm:hasShapeAndSize ;
+                                       owl:someValuesFrom kg4cut:Thread
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MachPP:hasDiameter ;
+                                       owl:someValuesFrom xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MachPP:hasLength ;
+                                       owl:someValuesFrom xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty MachPP:hasPitch ;
+                                       owl:someValuesFrom xsd:float
+                                     ] .
+
+
+###  https://www.w3id.org/MachPP#ExternalShape
+MachPP:ExternalShape rdf:type owl:Class ;
+                     rdfs:subClassOf MachPP:GeometricalShape .
+
+
+###  https://www.w3id.org/MachPP#FeedRate
+MachPP:FeedRate rdf:type owl:Class ;
+                rdfs:subClassOf MachPP:Parameter ;
+                rdfs:isDefinedBy "cutting length divided by spindle speed" ;
+                rdfs:label "f" .
+
+
+###  https://www.w3id.org/MachPP#FinalWorkpiece
+MachPP:FinalWorkpiece rdf:type owl:Class ;
+                      rdfs:subClassOf MachPP:Workpiece .
+
+
+###  https://www.w3id.org/MachPP#Fixture
+MachPP:Fixture rdf:type owl:Class ;
+               rdfs:subClassOf MachPP:MachineToolComponent .
+
+
+###  https://www.w3id.org/MachPP#Frustum
+MachPP:Frustum rdf:type owl:Class ;
+               rdfs:subClassOf MachPP:ExternalShape .
+
+
+###  https://www.w3id.org/MachPP#FrustumCavity
+MachPP:FrustumCavity rdf:type owl:Class ;
+                     rdfs:subClassOf MachPP:InternalShape ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cm:hasShapeAndSize_internal ;
+                                       owl:someValuesFrom kg4cut:Chamfer
+                                     ] .
+
+
+###  https://www.w3id.org/MachPP#GangTooling
+MachPP:GangTooling rdf:type owl:Class ;
+                   rdfs:subClassOf MachPP:CuttingToolStorage .
+
+
+###  https://www.w3id.org/MachPP#GeometricalShape
+MachPP:GeometricalShape rdf:type owl:Class .
+
+
+###  https://www.w3id.org/MachPP#HexagonalPrism
+MachPP:HexagonalPrism rdf:type owl:Class ;
+                      rdfs:subClassOf MachPP:Prism ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty MachPP:hasLength ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:float
+                                      ] .
+
+
+###  https://www.w3id.org/MachPP#InternalFreeFormCavity
+MachPP:InternalFreeFormCavity rdf:type owl:Class ;
+                              rdfs:subClassOf MachPP:InternalShape ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty cm:hasShapeAndSize_internal ;
+                                                owl:someValuesFrom <https://w3id.org/kg4cut/3DProfile>
+                                              ] .
+
+
+###  https://www.w3id.org/MachPP#InternalHelix
+MachPP:InternalHelix rdf:type owl:Class ;
+                     rdfs:subClassOf MachPP:InternalShape ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cm:hasShapeAndSize_internal ;
+                                       owl:someValuesFrom kg4cut:Thread
+                                     ] .
+
+
+###  https://www.w3id.org/MachPP#InternalShape
+MachPP:InternalShape rdf:type owl:Class ;
+                     rdfs:subClassOf MachPP:GeometricalShape ;
+                     rdfs:seeAlso "Internal surfaces created by the removal of the  material volumes inside the parts, generally can be called holes, but in manufacturing depending the shape has specific names called also features" .
+
+
+###  https://www.w3id.org/MachPP#Lathe
+MachPP:Lathe rdf:type owl:Class ;
+             rdfs:subClassOf MachPP:MachineTool ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty MachPP:hasWorkholding ;
+                               owl:someValuesFrom MachPP:Chuck
+                             ] .
+
+
+###  https://www.w3id.org/MachPP#MachineOperation
+MachPP:MachineOperation rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:Operation .
+
+
+###  https://www.w3id.org/MachPP#MachineTendingBiddingQuote
+MachPP:MachineTendingBiddingQuote rdf:type owl:Class ;
+                                  rdfs:subClassOf MachPP:BiddingQuote ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty marco:containsResource ;
+                                                    owl:someValuesFrom marco:Resource
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty marco:hasBasicResourceInformation ;
+                                                    owl:someValuesFrom MachPP:ManufacturingProcessPlan
+                                                  ] .
+
+
+###  https://www.w3id.org/MachPP#MachineTool
+MachPP:MachineTool rdf:type owl:Class ;
+                   rdfs:subClassOf marco:IndividualDevice ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:hasComponent ;
+                                     owl:someValuesFrom MachPP:MachineToolComponent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty MachPP:hasManufacturer ;
+                                     owl:allValuesFrom MachPP:Manufacturer
+                                   ] ;
+                   rdfs:comment "Machine tool, any stationary power-driven machine that is used to shape or form parts made of metal or other materials. The shaping is accomplished in four general ways: (1) by cutting excess material in the form of chips from the part; (2) by shearing the material; (3) by squeezing metallic parts to the desired shape; and (4) by applying electricity, ultrasound, or corrosive chemicals to the material. The fourth category covers modern machine tools and processes for machining ultrahard metals not machinable by older methods [https://www.britannica.com/technology/machine-tool#ref39137]."@en .
+
+
+###  https://www.w3id.org/MachPP#MachineToolComponent
+MachPP:MachineToolComponent rdf:type owl:Class .
+
+
+###  https://www.w3id.org/MachPP#MachiningOperation
+MachPP:MachiningOperation rdf:type owl:Class ;
+                          rdfs:subClassOf MachPP:Operation ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MachPP:produces ;
+                                            owl:someValuesFrom MachPP:Workpiece
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty MachPP:transforms ;
+                                            owl:someValuesFrom MachPP:GeometricalShape
+                                          ] .
+
+
+###  https://www.w3id.org/MachPP#ManualOperation
+MachPP:ManualOperation rdf:type owl:Class ;
+                       rdfs:subClassOf MachPP:Operation .
+
+
+###  https://www.w3id.org/MachPP#Manufacturer
+MachPP:Manufacturer rdf:type owl:Class ;
+                    rdfs:subClassOf org:Organization .
+
+
+###  https://www.w3id.org/MachPP#ManufacturingProcessPlan
+MachPP:ManufacturingProcessPlan rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty co:composedof ;
+                                                  owl:someValuesFrom MachPP:Task
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty MachPP:estimatesProduction ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onDataRange xsd:float
+                                                ] .
+
+
+###  https://www.w3id.org/MachPP#Material
+MachPP:Material rdf:type owl:Class .
+
+
+###  https://www.w3id.org/MachPP#MaterialRemoved
+MachPP:MaterialRemoved rdf:type owl:Class ;
+                       rdfs:subClassOf MachPP:Material ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty MachPP:hasThickness ;
+                                         owl:someValuesFrom xsd:float
+                                       ] .
+
+
+###  https://www.w3id.org/MachPP#MillingCuttingTool
+MachPP:MillingCuttingTool rdf:type owl:Class ;
+                          rdfs:subClassOf MachPP:CuttingTool .
+
+
+###  https://www.w3id.org/MachPP#MillingOperation
+MachPP:MillingOperation rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:MachiningOperation .
+
+
+###  https://www.w3id.org/MachPP#NumZ
+MachPP:NumZ rdf:type owl:Class ;
+            rdfs:subClassOf MachPP:Parameter .
+
+
+###  https://www.w3id.org/MachPP#OpeningDoor
+MachPP:OpeningDoor rdf:type owl:Class ;
+                   rdfs:subClassOf MachPP:MachineOperation .
+
+
+###  https://www.w3id.org/MachPP#Operation
+MachPP:Operation rdf:type owl:Class ;
+                 rdfs:comment "Agregation of tasks related to manufacturing production"@en .
+
+
+###  https://www.w3id.org/MachPP#Parameter
+MachPP:Parameter rdf:type owl:Class ;
+                 rdfs:subClassOf cm:CapabilityParameterAdditional ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty MachPP:hasValue ;
+                                   owl:someValuesFrom xsd:float
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty MachPP:hasFeedRate ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:float
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty MachPP:hasFeedRate ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:float
+                                 ] .
+
+
+###  https://www.w3id.org/MachPP#PeckDepth
+MachPP:PeckDepth rdf:type owl:Class ;
+                 rdfs:subClassOf MachPP:Parameter .
+
+
+###  https://www.w3id.org/MachPP#Prism
+MachPP:Prism rdf:type owl:Class ;
+             rdfs:subClassOf MachPP:ExternalShape ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty MachPP:hasDepth ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty MachPP:hasLength ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty MachPP:hasWidth ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] .
+
+
+###  https://www.w3id.org/MachPP#PrismCavity
+MachPP:PrismCavity rdf:type owl:Class ;
+                   rdfs:subClassOf MachPP:InternalShape ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cm:hasShapeAndSize_internal ;
+                                     owl:someValuesFrom kg4cut:Pocket
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cm:hasShapeAndSize_internal ;
+                                     owl:someValuesFrom kg4cut:Slot
+                                   ] .
+
+
+###  https://www.w3id.org/MachPP#RawWorkpiece
+MachPP:RawWorkpiece rdf:type owl:Class ;
+                    rdfs:subClassOf MachPP:Workpiece .
+
+
+###  https://www.w3id.org/MachPP#RoboticLoading
+MachPP:RoboticLoading rdf:type owl:Class ;
+                      rdfs:subClassOf MachPP:RoboticOperation .
+
+
+###  https://www.w3id.org/MachPP#RoboticOperation
+MachPP:RoboticOperation rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:Operation .
+
+
+###  https://www.w3id.org/MachPP#RoboticRepositioning
+MachPP:RoboticRepositioning rdf:type owl:Class ;
+                            rdfs:subClassOf MachPP:RoboticOperation .
+
+
+###  https://www.w3id.org/MachPP#RoboticUnloading
+MachPP:RoboticUnloading rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:RoboticOperation .
+
+
+###  https://www.w3id.org/MachPP#SemiFinalWorkpiece
+MachPP:SemiFinalWorkpiece rdf:type owl:Class ;
+                          rdfs:subClassOf MachPP:Workpiece .
+
+
+###  https://www.w3id.org/MachPP#Spindle
+MachPP:Spindle rdf:type owl:Class ;
+               rdfs:subClassOf MachPP:MachineToolComponent .
+
+
+###  https://www.w3id.org/MachPP#Task
+MachPP:Task rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty co:input ;
+                              owl:someValuesFrom MachPP:Parameter
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty MachPP:hasInputRole ;
+                              owl:someValuesFrom MachPP:Parameter
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty MachPP:hasPredecessor ;
+                              owl:someValuesFrom MachPP:Task
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty MachPP:hasSuccessor ;
+                              owl:someValuesFrom MachPP:Task
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty MachPP:isSpecifiedBy ;
+                              owl:someValuesFrom MachPP:Operation
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty MachPP:hasDuration ;
+                              owl:someValuesFrom xsd:float
+                            ] ;
+            rdfs:comment "Smallest level of granularity where it is possible to declare all the inputs required to obtain/create/produce the output"@en .
+
+
+###  https://www.w3id.org/MachPP#TheoreticalSurfaceFinished
+MachPP:TheoreticalSurfaceFinished rdf:type owl:Class ;
+                                  rdfs:subClassOf MachPP:Parameter ;
+                                  rdfs:label "h" .
+
+
+###  https://www.w3id.org/MachPP#TurningCuttingTool
+MachPP:TurningCuttingTool rdf:type owl:Class ;
+                          rdfs:subClassOf MachPP:CuttingTool .
+
+
+###  https://www.w3id.org/MachPP#TurningOperation
+MachPP:TurningOperation rdf:type owl:Class ;
+                        rdfs:subClassOf MachPP:MachiningOperation ;
+                        rdfs:label "Turning" .
+
+
+###  https://www.w3id.org/MachPP#Turret
+MachPP:Turret rdf:type owl:Class ;
+              rdfs:subClassOf MachPP:CuttingToolStorage .
+
+
+###  https://www.w3id.org/MachPP#Workpiece
+MachPP:Workpiece rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty co:composedof ;
+                                   owl:someValuesFrom MachPP:Material
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty MachPP:isFixedIn ;
+                                   owl:someValuesFrom MachPP:Fixture
+                                 ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.w3id.org/MachPP#AutomaticOperation
+MachPP:AutomaticOperation rdf:type owl:NamedIndividual ,
+                                   MachPP:MachineOperation ,
+                                   MachPP:RoboticOperation .
+
+
+###  https://www.w3id.org/MachPP#C35
+MachPP:C35 rdf:type owl:NamedIndividual ,
+                    MachPP:Material .
+
+
+###  https://www.w3id.org/MachPP#CloseDoorOkumaLB3000MY
+MachPP:CloseDoorOkumaLB3000MY rdf:type owl:NamedIndividual ,
+                                       MachPP:ClosingDoor ,
+                                       MachPP:Task ;
+                              MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541DrillingTailstock> ;
+                              MachPP:isSpecifiedBy MachPP:AutomaticOperation ;
+                              MachPP:hasDuration "0.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#ConF_d32_D40.5_l7.5
+MachPP:ConF_d32_D40.5_l7.5 rdf:type owl:NamedIndividual ,
+                                    MachPP:ConicalFrustum .
+
+
+###  https://www.w3id.org/MachPP#ControlUnitFanucR30
+MachPP:ControlUnitFanucR30 rdf:type owl:NamedIndividual ,
+                                    marco:IndividualControlDevice ;
+                           MachPP:hasPrice "500.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool1
+MachPP:CuttingTool1 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:cuts <https://www.w3id.org/MachPP#582541RawWorkpiece> ;
+                    MachPP:hasManufacturer MachPP:Mitsubishi ;
+                    MachPP:hasParameter MachPP:CuttingTool1Param ;
+                    MachPP:isSpecificFor MachPP:ExternalTurningRoughing ;
+                    MachPP:hasISOCode "XYZ" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool10
+MachPP:CuttingTool10 rdf:type owl:NamedIndividual ,
+                              MachPP:CuttingTool ,
+                              MachPP:TurningCuttingTool ;
+                     MachPP:hasManufacturer MachPP:Mitsubishi ;
+                     MachPP:hasParameter MachPP:CuttingTool10Param ;
+                     MachPP:isSpecificFor MachPP:ProfileTurningFinishing ;
+                     MachPP:hasISOCode "" ;
+                     MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool10Param
+MachPP:CuttingTool10Param rdf:type owl:NamedIndividual ,
+                                   MachPP:Parameter ;
+                          MachPP:hasInputRole <https://www.w3id.org/MachPP#582541ProfileFinishTurning> ;
+                          MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541ProfileFinishTurning> ;
+                          MachPP:hasFeedRate "0.12"^^xsd:float ;
+                          MachPP:hasMaxSpeed "557.0"^^xsd:float ;
+                          MachPP:hasNumPasses 1 ;
+                          MachPP:hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool11
+MachPP:CuttingTool11 rdf:type owl:NamedIndividual ,
+                              MachPP:CuttingTool ,
+                              MachPP:TurningCuttingTool ;
+                     MachPP:hasManufacturer MachPP:Sandvik ;
+                     MachPP:hasParameter MachPP:CuttingTool11Param ;
+                     MachPP:isSpecificFor MachPP:M27ThreadingTurning ;
+                     MachPP:hasISOCode "" ;
+                     MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool11Param
+MachPP:CuttingTool11Param rdf:type owl:NamedIndividual ,
+                                   MachPP:Parameter ;
+                          MachPP:hasInputRole <https://www.w3id.org/MachPP#582541ThreadingM27> ;
+                          MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541ThreadingM27> ;
+                          MachPP:hasFeedRate "2.0"^^xsd:float ;
+                          MachPP:hasMaxSpeed "424.0"^^xsd:float ;
+                          MachPP:hasNumPasses 10 ;
+                          MachPP:hasRecommendedSpeed "120.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool1Param
+MachPP:CuttingTool1Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ;
+                         MachPP:hasFeedRate "0.3"^^xsd:float ;
+                         MachPP:hasMaxSpeed "557.0"^^xsd:float ;
+                         MachPP:hasNumPasses 1 ;
+                         MachPP:hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool2
+MachPP:CuttingTool2 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Sandvik ;
+                    MachPP:hasParameter MachPP:CuttingTool2Param ;
+                    MachPP:isSpecificFor MachPP:TurningDrilling ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool2Param
+MachPP:CuttingTool2Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541HexagonHoleDrilling> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541HexagonHoleDrilling> ;
+                         MachPP:hasFeedRate "0.12"^^xsd:float ;
+                         MachPP:hasMaxSpeed "217.0"^^xsd:float ;
+                         MachPP:hasNumPasses 1 ;
+                         MachPP:hasRecommendedSpeed "100.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool3
+MachPP:CuttingTool3 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Sandvik ;
+                    MachPP:hasParameter MachPP:CuttingTool3Param ;
+                    MachPP:isSpecificFor MachPP:ExternalTurningFinishing ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool3Param
+MachPP:CuttingTool3Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ;
+                         MachPP:hasFeedRate "0.15"^^xsd:float ;
+                         MachPP:hasMaxSpeed "557.0"^^xsd:float ;
+                         MachPP:hasNumPasses 3 ;
+                         MachPP:hasRecommendedSpeed "280.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool4
+MachPP:CuttingTool4 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Mitsubishi ;
+                    MachPP:hasParameter MachPP:CuttingTool4Param ;
+                    MachPP:isSpecificFor MachPP:M30ThreadingTurning ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool4Param
+MachPP:CuttingTool4Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541ThreadingM30> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541ThreadingM30> ;
+                         MachPP:hasFeedRate "3.5"^^xsd:float ;
+                         MachPP:hasMaxSpindleSpeed "471.0"^^xsd:float ;
+                         MachPP:hasNumPasses 15 ;
+                         MachPP:hasRecommendedSpeed "120.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool5
+MachPP:CuttingTool5 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:MillingCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Sandvik ;
+                    MachPP:hasParameter MachPP:CuttingTool5Param ;
+                    MachPP:isSpecificFor MachPP:FaceMilling ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 3 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool5Param
+MachPP:CuttingTool5Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541MillingYAxis> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541MillingYAxis> ;
+                         MachPP:hasFeedRate "0.18"^^xsd:float ;
+                         MachPP:hasMaxSpindleSpeed "314.0"^^xsd:float ;
+                         MachPP:hasNumPasses 2 ;
+                         MachPP:hasRecommendedSpeed "50.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool6
+MachPP:CuttingTool6 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Mitsubishi ;
+                    MachPP:hasParameter MachPP:CuttingTool6Param ;
+                    MachPP:isSpecificFor MachPP:HexagonBroachingTurning ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool6Param
+MachPP:CuttingTool6Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541HexagonBroaching> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541HexagonBroaching> ;
+                         MachPP:hasFeedRate "0.15"^^xsd:float ;
+                         MachPP:hasMaxSpeed "220.0"^^xsd:float ;
+                         MachPP:hasNumPasses 1 ;
+                         MachPP:hasRecommendedSpeed "12.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool7
+MachPP:CuttingTool7 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:DrillingCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Sandvik ;
+                    MachPP:hasParameter MachPP:CuttingTool7Param ;
+                    MachPP:isSpecificFor MachPP:DrillingTailstock ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool7Param
+MachPP:CuttingTool7Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541DrillingTailstock> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541DrillingTailstock> ;
+                         MachPP:hasFeedRate "0.1"^^xsd:float ;
+                         MachPP:hasMaxSpeed "251.0"^^xsd:float ;
+                         MachPP:hasNumPasses 1 ;
+                         MachPP:hasRecommendedSpeed "45.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool8
+MachPP:CuttingTool8 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Mitsubishi ;
+                    MachPP:hasParameter MachPP:CuttingTool8Param ;
+                    MachPP:isSpecificFor MachPP:FaceTurningRoughing ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool8Param
+MachPP:CuttingTool8Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541FaceRoughTurning> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541FaceRoughTurning> ;
+                         MachPP:hasFeedRate "0.25"^^xsd:float ;
+                         MachPP:hasMaxSpeed "557.0"^^xsd:float ;
+                         MachPP:hasNumPasses 4 ;
+                         MachPP:hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool9
+MachPP:CuttingTool9 rdf:type owl:NamedIndividual ,
+                             MachPP:CuttingTool ,
+                             MachPP:TurningCuttingTool ;
+                    MachPP:hasManufacturer MachPP:Mitsubishi ;
+                    MachPP:hasParameter MachPP:CuttingTool9Param ;
+                    MachPP:isSpecificFor MachPP:ProfileTurningRoughing ;
+                    MachPP:hasISOCode "" ;
+                    MachPP:hasNumZ 1 .
+
+
+###  https://www.w3id.org/MachPP#CuttingTool9Param
+MachPP:CuttingTool9Param rdf:type owl:NamedIndividual ,
+                                  MachPP:Parameter ;
+                         MachPP:hasInputRole <https://www.w3id.org/MachPP#582541ProfileRoughTurning> ;
+                         MachPP:isSpecificFor <https://www.w3id.org/MachPP#582541ProfileRoughTurning> ;
+                         MachPP:hasFeedRate "0.3"^^xsd:float ;
+                         MachPP:hasMaxSpeed "557.0"^^xsd:float ;
+                         MachPP:hasNumPasses 1 ;
+                         MachPP:hasRecommendedSpeed "250.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d13.8_l10.5
+MachPP:Cyl_d13.8_l10.5 rdf:type owl:NamedIndividual ,
+                                MachPP:Cylinder ;
+                       MachPP:hasInputRole <https://www.w3id.org/MachPP#582541HexagonHoleDrilling> ;
+                       MachPP:hasDiameter "13.8"^^xsd:float ;
+                       MachPP:hasLength "10.5"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d30.1_l47
+MachPP:Cyl_d30.1_l47 rdf:type owl:NamedIndividual ,
+                              MachPP:Cylinder ;
+                     MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ;
+                     MachPP:hasDiameter "30.1"^^xsd:float ;
+                     MachPP:hasLength "47.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d30_l47
+MachPP:Cyl_d30_l47 rdf:type owl:NamedIndividual ,
+                            MachPP:Cylinder ;
+                   MachPP:hasDiameter "30.0"^^xsd:float ;
+                   MachPP:hasLength "47.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d32_l35
+MachPP:Cyl_d32_l35 rdf:type owl:NamedIndividual ,
+                            MachPP:Cylinder ;
+                   MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ;
+                   MachPP:hasDiameter "32.0"^^xsd:float ;
+                   MachPP:hasLength "35.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d39.4_l28
+MachPP:Cyl_d39.4_l28 rdf:type owl:NamedIndividual ,
+                              MachPP:Cylinder ;
+                     MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ;
+                     MachPP:hasDiameter "39.4"^^xsd:float ;
+                     MachPP:hasLength "28.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Cyl_d40.5_l36
+MachPP:Cyl_d40.5_l36 rdf:type owl:NamedIndividual ,
+                              MachPP:Cylinder ;
+                     MachPP:hasInputRole <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ;
+                     MachPP:hasDiameter "40.5"^^xsd:float ;
+                     MachPP:hasLength "36.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#DoubleMagazineTable
+MachPP:DoubleMagazineTable rdf:type owl:NamedIndividual ,
+                                    marco:IndividualStorageDevice ;
+                           MachPP:hasDepth "800.0"^^xsd:float ;
+                           MachPP:hasLength "1200.0"^^xsd:float ;
+                           MachPP:hasPrice "1000.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#DrillingTailstock
+MachPP:DrillingTailstock rdf:type owl:NamedIndividual ,
+                                  MachPP:DrillingOperation ,
+                                  MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#ExternalTurningFinishing
+MachPP:ExternalTurningFinishing rdf:type owl:NamedIndividual ,
+                                         MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#ExternalTurningRoughing
+MachPP:ExternalTurningRoughing rdf:type owl:NamedIndividual ,
+                                        MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#FaceMilling
+MachPP:FaceMilling rdf:type owl:NamedIndividual ,
+                            MachPP:MillingOperation .
+
+
+###  https://www.w3id.org/MachPP#FaceTurningRoughing
+MachPP:FaceTurningRoughing rdf:type owl:NamedIndividual ,
+                                    MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#Hel_d30_l37_p3.5
+MachPP:Hel_d30_l37_p3.5 rdf:type owl:NamedIndividual ,
+                                 MachPP:ExternalHelix ;
+                        MachPP:hasDiameter "30.0"^^xsd:float ;
+                        MachPP:hasLength "47.0"^^xsd:float ;
+                        MachPP:hasPitch "3.5"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#HexPri_a14_l9
+MachPP:HexPri_a14_l9 rdf:type owl:NamedIndividual ,
+                              MachPP:HexagonalPrism ;
+                     MachPP:hasBaseEdge "6.7"^^xsd:float ;
+                     MachPP:hasLength "9.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#HexagonBroachingTurning
+MachPP:HexagonBroachingTurning rdf:type owl:NamedIndividual ,
+                                        MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#HexagonHole
+MachPP:HexagonHole rdf:type owl:NamedIndividual ,
+                            MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#Length
+MachPP:Length rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/MachPP#M27ThreadingTurning
+MachPP:M27ThreadingTurning rdf:type owl:NamedIndividual ,
+                                    MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#M30ThreadingTurning
+MachPP:M30ThreadingTurning rdf:type owl:NamedIndividual ,
+                                    MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#Mitsubishi
+MachPP:Mitsubishi rdf:type owl:NamedIndividual ,
+                           MachPP:Manufacturer .
+
+
+###  https://www.w3id.org/MachPP#Okuma
+MachPP:Okuma rdf:type owl:NamedIndividual ,
+                      MachPP:Manufacturer .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000M
+MachPP:OkumaLB3000M rdf:type owl:NamedIndividual ,
+                             MachPP:Lathe ;
+                    MachPP:hasPrice "1000.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000MY
+MachPP:OkumaLB3000MY rdf:type owl:NamedIndividual ,
+                              MachPP:Lathe ;
+                     MachPP:hasComponent MachPP:OkumaLB3000MY ,
+                                         MachPP:OkumaLB3000MYSpindle ,
+                                         MachPP:OkumaLB3000MYSpindle2 ;
+                     MachPP:hasManufacturer MachPP:Okuma ;
+                     MachPP:hasPrice "1500.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000MYChuck
+MachPP:OkumaLB3000MYChuck rdf:type owl:NamedIndividual ,
+                                   MachPP:Chuck .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000MYSpindle
+MachPP:OkumaLB3000MYSpindle rdf:type owl:NamedIndividual ,
+                                     MachPP:Spindle ;
+                            MachPP:hasMaxSpindleSpeed 5000 ;
+                            MachPP:hasPower 15 ;
+                            MachPP:hasTorque 240 .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000MYSpindle2
+MachPP:OkumaLB3000MYSpindle2 rdf:type owl:NamedIndividual ,
+                                      MachPP:Spindle .
+
+
+###  https://www.w3id.org/MachPP#OkumaLB3000MYTurret
+MachPP:OkumaLB3000MYTurret rdf:type owl:NamedIndividual ,
+                                    MachPP:Turret ;
+                           MachPP:hasMaxCuttingTool 12 .
+
+
+###  https://www.w3id.org/MachPP#OpenDoorOkuma_LB3000MY
+MachPP:OpenDoorOkuma_LB3000MY rdf:type owl:NamedIndividual ,
+                                       MachPP:OpeningDoor ,
+                                       MachPP:Task ;
+                              MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541Repositioning> ;
+                              MachPP:isSpecifiedBy MachPP:AutomaticOperation ;
+                              MachPP:hasDuration "0.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#Pri_l15_dp1_h1
+MachPP:Pri_l15_dp1_h1 rdf:type owl:NamedIndividual ,
+                               MachPP:Prism ;
+                      MachPP:hasDepth "1.0"^^xsd:float ;
+                      MachPP:hasLength "15.0"^^xsd:float ;
+                      MachPP:hasWidth "1.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#ProfileTurningFinishing
+MachPP:ProfileTurningFinishing rdf:type owl:NamedIndividual ,
+                                        MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#ProfileTurningRoughing
+MachPP:ProfileTurningRoughing rdf:type owl:NamedIndividual ,
+                                       MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#RepositioningTower
+MachPP:RepositioningTower rdf:type owl:NamedIndividual ,
+                                   marco:IndividualFixturingDevice .
+
+
+###  https://www.w3id.org/MachPP#RobotFanucM20i
+MachPP:RobotFanucM20i rdf:type owl:NamedIndividual ,
+                               marco:IndividualFeedingDevice ;
+                      cm:payload "20.0"^^xsd:float ;
+                      MachPP:hasPrice "1000.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#RobotOperation
+MachPP:RobotOperation rdf:type owl:NamedIndividual ,
+                               MachPP:RoboticOperation .
+
+
+###  https://www.w3id.org/MachPP#Sandvik
+MachPP:Sandvik rdf:type owl:NamedIndividual ,
+                        MachPP:Manufacturer .
+
+
+###  https://www.w3id.org/MachPP#SchunkVacuumGripper
+MachPP:SchunkVacuumGripper rdf:type owl:NamedIndividual ,
+                                    marco:IndividualGraspingDevice ;
+                           MachPP:hasPrice "500.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#TurningDrilling
+MachPP:TurningDrilling rdf:type owl:NamedIndividual ,
+                                MachPP:DrillingOperation ,
+                                MachPP:TurningOperation .
+
+
+###  https://www.w3id.org/MachPP#582541DrillingTailstock
+<https://www.w3id.org/MachPP#582541DrillingTailstock> rdf:type owl:NamedIndividual ,
+                                                               MachPP:DrillingOperation ,
+                                                               MachPP:MachiningOperation ,
+                                                               MachPP:Task ;
+                                                      MachPP:hasInputRole MachPP:CuttingTool7Param ;
+                                                      MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541TailstockTravelIn> ;
+                                                      MachPP:isSpecifiedBy MachPP:DrillingTailstock ;
+                                                      MachPP:hasDuration "0.136"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541FaceRoughTurning
+<https://www.w3id.org/MachPP#582541FaceRoughTurning> rdf:type owl:NamedIndividual ,
+                                                              MachPP:MachiningOperation ,
+                                                              MachPP:Task ,
+                                                              MachPP:TurningOperation ;
+                                                     MachPP:hasInputRole MachPP:CuttingTool8Param ;
+                                                     MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541ProfileRoughTurning> ;
+                                                     MachPP:isSpecifiedBy MachPP:FaceTurningRoughing ;
+                                                     MachPP:hasDuration "0.111"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541FinalWorkpiece
+<https://www.w3id.org/MachPP#582541FinalWorkpiece> rdf:type owl:NamedIndividual ,
+                                                            MachPP:FinalWorkpiece .
+
+
+###  https://www.w3id.org/MachPP#582541HexagonBroaching
+<https://www.w3id.org/MachPP#582541HexagonBroaching> rdf:type owl:NamedIndividual ,
+                                                              MachPP:MachiningOperation ,
+                                                              MachPP:Task ,
+                                                              MachPP:TurningOperation ;
+                                                     MachPP:hasInputRole MachPP:CuttingTool6Param ,
+                                                                         MachPP:Cyl_d13.8_l10.5 ;
+                                                     MachPP:hasOutputRole MachPP:HexPri_a14_l9 ;
+                                                     MachPP:hasSuccessor MachPP:OpenDoorOkuma_LB3000MY ;
+                                                     MachPP:isSpecifiedBy MachPP:HexagonBroachingTurning ;
+                                                     MachPP:hasDuration "0.289"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541HexagonHoleDrilling
+<https://www.w3id.org/MachPP#582541HexagonHoleDrilling> rdf:type owl:NamedIndividual ,
+                                                                 MachPP:DrillingOperation ,
+                                                                 MachPP:MachiningOperation ,
+                                                                 MachPP:Task ,
+                                                                 MachPP:TurningOperation ;
+                                                        MachPP:hasInputRole MachPP:CuttingTool2Param ,
+                                                                            MachPP:Cyl_d13.8_l10.5 ,
+                                                                            <https://www.w3id.org/MachPP#582541InDepHexDrill> ,
+                                                                            <https://www.w3id.org/MachPP#582541InDiaHexDrill> ;
+                                                        MachPP:hasOutputRole <https://www.w3id.org/MachPP#582541OutDepHexDrill> ,
+                                                                             <https://www.w3id.org/MachPP#582541OutDiaHexDrill> ;
+                                                        MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ;
+                                                        MachPP:isSpecifiedBy MachPP:TurningDrilling ;
+                                                        MachPP:hasDuration "0.104"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541InDepHexDrill
+<https://www.w3id.org/MachPP#582541InDepHexDrill> rdf:type owl:NamedIndividual ;
+                                                  MachPP:hasValue "-1.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541InDiaHexDrill
+<https://www.w3id.org/MachPP#582541InDiaHexDrill> rdf:type owl:NamedIndividual ;
+                                                  MachPP:hasValue "13.2"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541Loading
+<https://www.w3id.org/MachPP#582541Loading> rdf:type owl:NamedIndividual ,
+                                                     MachPP:MachineOperation ,
+                                                     MachPP:RoboticLoading ,
+                                                     MachPP:Task ;
+                                            MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ;
+                                            MachPP:hasDuration "0.125"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541MillingYAxis
+<https://www.w3id.org/MachPP#582541MillingYAxis> rdf:type owl:NamedIndividual ,
+                                                          MachPP:MachiningOperation ,
+                                                          MachPP:MillingOperation ,
+                                                          MachPP:Task ;
+                                                 MachPP:hasInputRole MachPP:CuttingTool5Param ,
+                                                                     MachPP:Pri_l15_dp1_h1 ;
+                                                 MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541HexagonBroaching> ;
+                                                 MachPP:isSpecifiedBy MachPP:FaceMilling ;
+                                                 MachPP:hasDuration "0.289"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541OutDepHexDrill
+<https://www.w3id.org/MachPP#582541OutDepHexDrill> rdf:type owl:NamedIndividual ;
+                                                   MachPP:hasValue "10.0"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541OutDiaHexDrill
+<https://www.w3id.org/MachPP#582541OutDiaHexDrill> rdf:type owl:NamedIndividual ;
+                                                   MachPP:hasValue "13.6"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541ProfileFinishTurning
+<https://www.w3id.org/MachPP#582541ProfileFinishTurning> rdf:type owl:NamedIndividual ,
+                                                                  MachPP:MachiningOperation ,
+                                                                  MachPP:Task ,
+                                                                  MachPP:TurningOperation ;
+                                                         MachPP:hasInputRole MachPP:CuttingTool10Param ;
+                                                         MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541ThreadingM27> ;
+                                                         MachPP:isSpecifiedBy MachPP:ProfileTurningFinishing ;
+                                                         MachPP:hasDuration "0.554"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541ProfileRoughTurning
+<https://www.w3id.org/MachPP#582541ProfileRoughTurning> rdf:type owl:NamedIndividual ,
+                                                                 MachPP:MachiningOperation ,
+                                                                 MachPP:Task ,
+                                                                 MachPP:TurningOperation ;
+                                                        MachPP:hasInputRole MachPP:CuttingTool9Param ;
+                                                        MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541ProfileFinishTurning> ;
+                                                        MachPP:isSpecifiedBy MachPP:ProfileTurningRoughing ;
+                                                        MachPP:hasDuration "0.278"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541RawWorkpiece
+<https://www.w3id.org/MachPP#582541RawWorkpiece> rdf:type owl:NamedIndividual ,
+                                                          MachPP:RawWorkpiece ,
+                                                          MachPP:Workpiece ;
+                                                 co:composedof MachPP:C35 .
+
+
+###  https://www.w3id.org/MachPP#582541Repositioning
+<https://www.w3id.org/MachPP#582541Repositioning> rdf:type owl:NamedIndividual ,
+                                                           MachPP:RoboticRepositioning ,
+                                                           MachPP:Task ;
+                                                  MachPP:hasSuccessor MachPP:CloseDoorOkumaLB3000MY ;
+                                                  MachPP:isSpecifiedBy MachPP:RobotOperation ;
+                                                  MachPP:hasDuration "0.25"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541TailstockTravelIn
+<https://www.w3id.org/MachPP#582541TailstockTravelIn> rdf:type owl:NamedIndividual ,
+                                                               MachPP:MachineOperation ,
+                                                               MachPP:Task ;
+                                                      MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541FaceRoughTurning> ;
+                                                      MachPP:isSpecifiedBy MachPP:AutomaticOperation ;
+                                                      MachPP:hasDuration "0.12"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541TailstockTravelOut
+<https://www.w3id.org/MachPP#582541TailstockTravelOut> rdf:type owl:NamedIndividual ,
+                                                                MachPP:MachineOperation ,
+                                                                MachPP:Task ;
+                                                       MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541Unloading> ;
+                                                       MachPP:isSpecifiedBy MachPP:AutomaticOperation ;
+                                                       MachPP:hasDuration "0.089"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541ThreadingM27
+<https://www.w3id.org/MachPP#582541ThreadingM27> rdf:type owl:NamedIndividual ,
+                                                          MachPP:MachiningOperation ,
+                                                          MachPP:Task ,
+                                                          MachPP:TurningOperation ;
+                                                 MachPP:hasInputRole MachPP:CuttingTool11Param ;
+                                                 MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541TailstockTravelOut> ;
+                                                 MachPP:isSpecifiedBy MachPP:M27ThreadingTurning ;
+                                                 MachPP:hasDuration "0.184"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541ThreadingM30
+<https://www.w3id.org/MachPP#582541ThreadingM30> rdf:type owl:NamedIndividual ,
+                                                          MachPP:MachiningOperation ,
+                                                          MachPP:Task ,
+                                                          MachPP:TurningOperation ;
+                                                 MachPP:hasInputRole MachPP:CuttingTool4Param ,
+                                                                     MachPP:Cyl_d30_l47 ;
+                                                 MachPP:hasOutputRole MachPP:Hel_d30_l37_p3.5 ;
+                                                 MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541MillingYAxis> ;
+                                                 MachPP:isSpecifiedBy MachPP:M30ThreadingTurning ;
+                                                 MachPP:hasDuration "0.216"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541TurningExternalFinishing
+<https://www.w3id.org/MachPP#582541TurningExternalFinishing> rdf:type owl:NamedIndividual ,
+                                                                      MachPP:MachiningOperation ,
+                                                                      MachPP:Task ,
+                                                                      MachPP:TurningOperation ;
+                                                             MachPP:hasInputRole MachPP:CuttingTool3Param ,
+                                                                                 MachPP:Cyl_d30.1_l47 ,
+                                                                                 MachPP:Cyl_d39.4_l28 ;
+                                                             MachPP:hasOutputRole MachPP:Cyl_d30_l47 ,
+                                                                                  MachPP:Cyl_d39.4_l28 ;
+                                                             MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541ThreadingM30> ;
+                                                             MachPP:isSpecifiedBy MachPP:ExternalTurningFinishing ;
+                                                             MachPP:hasDuration "0.409"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541TurningExternalRoughing
+<https://www.w3id.org/MachPP#582541TurningExternalRoughing> rdf:type owl:NamedIndividual ,
+                                                                     MachPP:MachiningOperation ,
+                                                                     MachPP:Task ,
+                                                                     MachPP:TurningOperation ;
+                                                            MachPP:hasInputRole MachPP:CuttingTool1Param ,
+                                                                                MachPP:Cyl_d32_l35 ,
+                                                                                MachPP:Cyl_d40.5_l36 ;
+                                                            MachPP:hasOutputRole MachPP:Cyl_d30.1_l47 ,
+                                                                                 MachPP:Cyl_d39.4_l28 ;
+                                                            MachPP:hasSuccessor <https://www.w3id.org/MachPP#582541HexagonHoleDrilling> ;
+                                                            MachPP:isSpecifiedBy MachPP:ExternalTurningRoughing ;
+                                                            MachPP:hasDuration "0.093"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541Unloading
+<https://www.w3id.org/MachPP#582541Unloading> rdf:type owl:NamedIndividual ,
+                                                       MachPP:MachineOperation ,
+                                                       MachPP:RoboticUnloading ,
+                                                       MachPP:Task ;
+                                              MachPP:hasDuration "0.125"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541_ProcessPlan
+<https://www.w3id.org/MachPP#582541_ProcessPlan> rdf:type owl:NamedIndividual ,
+                                                          MachPP:ManufacturingProcessPlan ;
+                                                 co:composedof <https://www.w3id.org/MachPP#582541DrillingTailstock> ,
+                                                               <https://www.w3id.org/MachPP#582541FaceRoughTurning> ,
+                                                               <https://www.w3id.org/MachPP#582541HexagonBroaching> ,
+                                                               <https://www.w3id.org/MachPP#582541HexagonHoleDrilling> ,
+                                                               <https://www.w3id.org/MachPP#582541Loading> ,
+                                                               <https://www.w3id.org/MachPP#582541MillingYAxis> ,
+                                                               <https://www.w3id.org/MachPP#582541ProfileFinishTurning> ,
+                                                               <https://www.w3id.org/MachPP#582541Repositioning> ,
+                                                               <https://www.w3id.org/MachPP#582541TailstockTravelIn> ,
+                                                               <https://www.w3id.org/MachPP#582541TailstockTravelOut> ,
+                                                               <https://www.w3id.org/MachPP#582541ThreadingM27> ,
+                                                               <https://www.w3id.org/MachPP#582541ThreadingM30> ,
+                                                               <https://www.w3id.org/MachPP#582541TurningExternalFinishing> ,
+                                                               <https://www.w3id.org/MachPP#582541TurningExternalRoughing> ,
+                                                               <https://www.w3id.org/MachPP#582541Unloading> ;
+                                                 MachPP:estimatesProduction "28.3"^^xsd:float .
+
+
+###  https://www.w3id.org/MachPP#582541_RoboticCell_Quote
+<https://www.w3id.org/MachPP#582541_RoboticCell_Quote> rdf:type owl:NamedIndividual ,
+                                                                MachPP:MachineTendingBiddingQuote ;
+                                                       marco:containsResource MachPP:ControlUnitFanucR30 ,
+                                                                              MachPP:DoubleMagazineTable ,
+                                                                              MachPP:OkumaLB3000M ,
+                                                                              MachPP:OkumaLB3000MY ,
+                                                                              MachPP:RepositioningTower ,
+                                                                              MachPP:RobotFanucM20i ,
+                                                                              MachPP:SchunkVacuumGripper ,
+                                                                              <https://www.w3id.org/MachPP#582541_ProcessPlan> ;
+                                                       cm:cycleTime_average "7.0"^^xsd:float .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+kg4cut:WorkpieceGeometry rdfs:seeAlso "cm:ShapeAndSizeDefinition" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( MachPP:FinalWorkpiece
+                MachPP:RawWorkpiece
+                MachPP:SemiFinalWorkpiece
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
