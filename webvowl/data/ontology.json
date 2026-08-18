@@ -1,56 +1,4190 @@
 {
-  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
-  "header" : {
-    "languages" : [ "undefined" ],
-    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
-    "author" : [ "Beatriz Olarte Martinez" ],
-    "description" : {
-      "undefined" : "This ontology enables the mapping of machining process planning cards into the individual tasks that are required to produce a machined workpiece"
+  "_comment": "Generated for WebVOWL from the published MachPP ontology.ttl (OWL2VOWL-compatible structure)",
+  "header": {
+    "languages": [
+      "en",
+      "undefined"
+    ],
+    "baseIris": [
+      "http://org.semanticweb.owlapi/error",
+      "http://purl.org/dc/terms",
+      "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+      "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+      "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "http://www.w3.org/2001/XMLSchema",
+      "http://www.w3.org/ns/org",
+      "http://xmlns.com/foaf/0.1",
+      "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "https://resourcedescription.rd.tuni.fi/ontology/commonConcepts",
+      "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel",
+      "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "https://w3id.org/kg4cut",
+      "https://w3id.org/pmd/co",
+      "https://www.w3.org/ns/org",
+      "https://www.w3id.org/MachPP"
+    ],
+    "iri": "https://w3id.org/MachPP",
+    "title": {
+      "en": "Machining Process Planning Ontology (MachPP)",
+      "undefined": "Machining Process Planning Ontology (MachPP)"
     },
-    "labels" : {
-      "undefined" : "Machining Process Planning Ontology"
+    "version": "MachPP:1.0.12",
+    "author": [
+      "Beatriz Olarte"
+    ],
+    "description": {
+      "en": "This ontology contains information and knowledge required to produce machining tasks and processes. This information is normally contained in route cards, giving its fine granularity level, it is decomposed into machining tasks. MachPP allows mapping information from machining processes to route cards. Allowing the usage of manufacturing features as input and output to each machining task to link it to the machining specifications selected by experts. \nThe ontology is linked to MarCo ontology and kg4cut, enabling to map the assets requested by a full machine tending quote or even a final project."
     },
-    "comments" : {
-      "undefined" : "“This work was conducted using Protégé.” \nMusen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003."
+    "comments": {
+      "undefined": "“This work was conducted using Protégé.” \nMusen, M.A. The Protégé project: A look back and a look forward. AI Matters. Association of Computing Machinery Specific Interest Group in Artificial Intelligence, 1(4), June 2015. DOI: 10.1145/2557001.25757003."
     },
-    "other" : {
-      "priorVersion" : [ {
-        "identifier" : "priorVersion",
-        "language" : "undefined",
-        "value" : "None",
-        "type" : "label"
-      } ],
-      "license" : [ {
-        "identifier" : "license",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/4.0/",
-        "type" : "label"
-      } ],
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Beatriz Olarte Martinez",
-        "type" : "label"
-      } ]
+    "other": {
+      "versionIRI": [
+        {
+          "identifier": "versionIRI",
+          "language": "undefined",
+          "value": "MachPP:1.0.12",
+          "type": "label"
+        }
+      ],
+      "priorVersion": [
+        {
+          "identifier": "priorVersion",
+          "language": "undefined",
+          "value": "1.0.9",
+          "type": "label"
+        }
+      ],
+      "license": [
+        {
+          "identifier": "license",
+          "language": "undefined",
+          "value": "https://creativecommons.org/licenses/by/4.0/",
+          "type": "label"
+        },
+        {
+          "identifier": "license",
+          "language": "undefined",
+          "value": "https://creativecommons.org/licenses/by/4.0/",
+          "type": "label"
+        }
+      ]
     }
   },
-  "namespace" : [ ],
-  "class" : [ {
-    "id" : "0",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  } ],
-  "classAttribute" : [ {
-    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#Turret",
-    "baseIri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
-    "instances" : 0,
-    "id" : "0"
-  }, {
-    "iri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP#TurningCuttingTool",
-    "baseIri" : "http://www.semanticweb.org/olart/ontologies/2024/5/MachPP",
-    "instances" : 0,
-    "id" : "1"
-  } ]
+  "namespace": [
+    {
+      "name": "MachPP",
+      "iri": "https://www.w3id.org/MachPP#"
+    },
+    {
+      "name": "brick",
+      "iri": "https://brickschema.org/schema/Brick#"
+    },
+    {
+      "name": "cm",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#"
+    },
+    {
+      "name": "co",
+      "iri": "https://w3id.org/pmd/co/"
+    },
+    {
+      "name": "csvw",
+      "iri": "http://www.w3.org/ns/csvw#"
+    },
+    {
+      "name": "dc",
+      "iri": "http://purl.org/dc/elements/1.1/"
+    },
+    {
+      "name": "dcam",
+      "iri": "http://purl.org/dc/dcam/"
+    },
+    {
+      "name": "dcat",
+      "iri": "http://www.w3.org/ns/dcat#"
+    },
+    {
+      "name": "dcmitype",
+      "iri": "http://purl.org/dc/dcmitype/"
+    },
+    {
+      "name": "dcterms",
+      "iri": "http://purl.org/dc/terms/"
+    },
+    {
+      "name": "doap",
+      "iri": "http://usefulinc.com/ns/doap#"
+    },
+    {
+      "name": "foaf",
+      "iri": "http://xmlns.com/foaf/0.1/"
+    },
+    {
+      "name": "geo",
+      "iri": "http://www.opengis.net/ont/geosparql#"
+    },
+    {
+      "name": "kg4cut",
+      "iri": "https://w3id.org/kg4cut/"
+    },
+    {
+      "name": "marco",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#"
+    },
+    {
+      "name": "odp",
+      "iri": "http://www.ontologydesignpatterns.org/cp/owl/partof.owl"
+    },
+    {
+      "name": "odrl",
+      "iri": "http://www.w3.org/ns/odrl/2/"
+    },
+    {
+      "name": "org",
+      "iri": "http://www.w3.org/ns/org#"
+    },
+    {
+      "name": "org1",
+      "iri": "https://www.w3.org/ns/org#"
+    },
+    {
+      "name": "owl",
+      "iri": "http://www.w3.org/2002/07/owl#"
+    },
+    {
+      "name": "prof",
+      "iri": "http://www.w3.org/ns/dx/prof/"
+    },
+    {
+      "name": "prov",
+      "iri": "http://www.w3.org/ns/prov#"
+    },
+    {
+      "name": "qb",
+      "iri": "http://purl.org/linked-data/cube#"
+    },
+    {
+      "name": "rdf",
+      "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "name": "rdfs",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    {
+      "name": "schema",
+      "iri": "https://schema.org/"
+    },
+    {
+      "name": "sh",
+      "iri": "http://www.w3.org/ns/shacl#"
+    },
+    {
+      "name": "skos",
+      "iri": "http://www.w3.org/2004/02/skos/core#"
+    },
+    {
+      "name": "sosa",
+      "iri": "http://www.w3.org/ns/sosa/"
+    },
+    {
+      "name": "ssn",
+      "iri": "http://www.w3.org/ns/ssn/"
+    },
+    {
+      "name": "time",
+      "iri": "http://www.w3.org/2006/time#"
+    },
+    {
+      "name": "vann",
+      "iri": "http://purl.org/vocab/vann/"
+    },
+    {
+      "name": "void",
+      "iri": "http://rdfs.org/ns/void#"
+    },
+    {
+      "name": "wgs",
+      "iri": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+    },
+    {
+      "name": "xml",
+      "iri": "http://www.w3.org/XML/1998/namespace"
+    },
+    {
+      "name": "xsd",
+      "iri": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "class": [
+    {
+      "id": "0",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "owl:Class"
+    },
+    {
+      "id": "3",
+      "type": "owl:Class"
+    },
+    {
+      "id": "4",
+      "type": "owl:Class"
+    },
+    {
+      "id": "5",
+      "type": "owl:Class"
+    },
+    {
+      "id": "6",
+      "type": "owl:Class"
+    },
+    {
+      "id": "7",
+      "type": "owl:Class"
+    },
+    {
+      "id": "8",
+      "type": "owl:Class"
+    },
+    {
+      "id": "9",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "11",
+      "type": "owl:Class"
+    },
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "13",
+      "type": "owl:Class"
+    },
+    {
+      "id": "14",
+      "type": "owl:Class"
+    },
+    {
+      "id": "15",
+      "type": "owl:Class"
+    },
+    {
+      "id": "16",
+      "type": "owl:Class"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "18",
+      "type": "owl:Class"
+    },
+    {
+      "id": "19",
+      "type": "owl:Class"
+    },
+    {
+      "id": "20",
+      "type": "owl:Class"
+    },
+    {
+      "id": "21",
+      "type": "owl:Class"
+    },
+    {
+      "id": "22",
+      "type": "owl:Class"
+    },
+    {
+      "id": "23",
+      "type": "owl:Class"
+    },
+    {
+      "id": "24",
+      "type": "owl:Class"
+    },
+    {
+      "id": "25",
+      "type": "owl:Class"
+    },
+    {
+      "id": "26",
+      "type": "owl:Class"
+    },
+    {
+      "id": "27",
+      "type": "owl:Class"
+    },
+    {
+      "id": "28",
+      "type": "owl:Class"
+    },
+    {
+      "id": "29",
+      "type": "owl:Class"
+    },
+    {
+      "id": "30",
+      "type": "owl:Class"
+    },
+    {
+      "id": "31",
+      "type": "owl:Class"
+    },
+    {
+      "id": "32",
+      "type": "owl:Class"
+    },
+    {
+      "id": "33",
+      "type": "owl:Class"
+    },
+    {
+      "id": "34",
+      "type": "owl:Class"
+    },
+    {
+      "id": "35",
+      "type": "owl:Class"
+    },
+    {
+      "id": "36",
+      "type": "owl:Class"
+    },
+    {
+      "id": "37",
+      "type": "owl:Class"
+    },
+    {
+      "id": "38",
+      "type": "owl:Class"
+    },
+    {
+      "id": "39",
+      "type": "owl:Class"
+    },
+    {
+      "id": "40",
+      "type": "owl:Class"
+    },
+    {
+      "id": "41",
+      "type": "owl:Class"
+    },
+    {
+      "id": "42",
+      "type": "owl:Class"
+    },
+    {
+      "id": "43",
+      "type": "owl:Class"
+    },
+    {
+      "id": "44",
+      "type": "owl:Class"
+    },
+    {
+      "id": "45",
+      "type": "owl:Class"
+    },
+    {
+      "id": "46",
+      "type": "owl:Class"
+    },
+    {
+      "id": "47",
+      "type": "owl:Class"
+    },
+    {
+      "id": "48",
+      "type": "owl:Class"
+    },
+    {
+      "id": "49",
+      "type": "owl:Class"
+    },
+    {
+      "id": "50",
+      "type": "owl:Class"
+    },
+    {
+      "id": "51",
+      "type": "owl:Class"
+    },
+    {
+      "id": "52",
+      "type": "owl:Class"
+    },
+    {
+      "id": "53",
+      "type": "owl:Class"
+    },
+    {
+      "id": "54",
+      "type": "owl:Class"
+    },
+    {
+      "id": "55",
+      "type": "owl:Class"
+    },
+    {
+      "id": "56",
+      "type": "owl:Class"
+    },
+    {
+      "id": "57",
+      "type": "owl:Class"
+    },
+    {
+      "id": "58",
+      "type": "owl:Class"
+    },
+    {
+      "id": "59",
+      "type": "owl:Class"
+    },
+    {
+      "id": "60",
+      "type": "owl:Class"
+    },
+    {
+      "id": "61",
+      "type": "owl:Class"
+    },
+    {
+      "id": "62",
+      "type": "owl:Class"
+    },
+    {
+      "id": "63",
+      "type": "owl:Class"
+    },
+    {
+      "id": "64",
+      "type": "owl:Class"
+    },
+    {
+      "id": "65",
+      "type": "owl:Class"
+    },
+    {
+      "id": "66",
+      "type": "owl:Class"
+    },
+    {
+      "id": "67",
+      "type": "owl:Class"
+    },
+    {
+      "id": "68",
+      "type": "owl:Class"
+    },
+    {
+      "id": "69",
+      "type": "owl:Class"
+    },
+    {
+      "id": "70",
+      "type": "owl:Class"
+    },
+    {
+      "id": "71",
+      "type": "owl:Class"
+    },
+    {
+      "id": "72",
+      "type": "owl:Class"
+    },
+    {
+      "id": "73",
+      "type": "owl:Class"
+    },
+    {
+      "id": "74",
+      "type": "owl:Class"
+    },
+    {
+      "id": "75",
+      "type": "owl:Class"
+    },
+    {
+      "id": "76",
+      "type": "owl:Class"
+    },
+    {
+      "id": "77",
+      "type": "owl:Class"
+    },
+    {
+      "id": "78",
+      "type": "owl:Class"
+    },
+    {
+      "id": "79",
+      "type": "owl:Class"
+    },
+    {
+      "id": "80",
+      "type": "owl:Class"
+    },
+    {
+      "id": "81",
+      "type": "owl:Class"
+    },
+    {
+      "id": "82",
+      "type": "owl:Class"
+    },
+    {
+      "id": "83",
+      "type": "owl:Class"
+    },
+    {
+      "id": "84",
+      "type": "owl:Class"
+    },
+    {
+      "id": "85",
+      "type": "owl:Class"
+    },
+    {
+      "id": "86",
+      "type": "owl:Class"
+    },
+    {
+      "id": "87",
+      "type": "owl:Class"
+    },
+    {
+      "id": "88",
+      "type": "owl:Class"
+    },
+    {
+      "id": "89",
+      "type": "owl:Class"
+    },
+    {
+      "id": "90",
+      "type": "owl:Class"
+    },
+    {
+      "id": "91",
+      "type": "owl:Class"
+    },
+    {
+      "id": "92",
+      "type": "owl:Class"
+    },
+    {
+      "id": "93",
+      "type": "owl:Class"
+    },
+    {
+      "id": "94",
+      "type": "owl:Class"
+    },
+    {
+      "id": "95",
+      "type": "owl:Class"
+    },
+    {
+      "id": "96",
+      "type": "owl:Class"
+    },
+    {
+      "id": "97",
+      "type": "owl:Class"
+    },
+    {
+      "id": "98",
+      "type": "owl:Class"
+    },
+    {
+      "id": "99",
+      "type": "owl:Class"
+    },
+    {
+      "id": "100",
+      "type": "owl:Class"
+    },
+    {
+      "id": "101",
+      "type": "owl:Class"
+    },
+    {
+      "id": "102",
+      "type": "owl:Class"
+    },
+    {
+      "id": "103",
+      "type": "owl:Class"
+    },
+    {
+      "id": "104",
+      "type": "owl:Class"
+    },
+    {
+      "id": "105",
+      "type": "owl:Class"
+    },
+    {
+      "id": "106",
+      "type": "owl:Class"
+    },
+    {
+      "id": "107",
+      "type": "owl:Class"
+    },
+    {
+      "id": "108",
+      "type": "owl:Class"
+    },
+    {
+      "id": "109",
+      "type": "owl:Class"
+    },
+    {
+      "id": "110",
+      "type": "owl:Class"
+    },
+    {
+      "id": "111",
+      "type": "owl:Class"
+    },
+    {
+      "id": "112",
+      "type": "owl:Class"
+    },
+    {
+      "id": "113",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "114",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "115",
+      "type": "rdfs:Datatype"
+    }
+  ],
+  "classAttribute": [
+    {
+      "iri": "http://org.semanticweb.owlapi/error#Error1",
+      "baseIri": "http://org.semanticweb.owlapi/error",
+      "label": {
+        "undefined": "Error1"
+      },
+      "instances": 0,
+      "id": "0"
+    },
+    {
+      "iri": "http://purl.org/dc/terms/Agent",
+      "baseIri": "http://purl.org/dc/terms",
+      "label": {
+        "undefined": "Agent"
+      },
+      "instances": 0,
+      "id": "1"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#Inserting",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Inserting"
+      },
+      "instances": 0,
+      "id": "2"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#Moving",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Moving"
+      },
+      "instances": 0,
+      "id": "3"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#Picking",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Picking"
+      },
+      "instances": 0,
+      "id": "4"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#Placing",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Placing"
+      },
+      "instances": 0,
+      "id": "5"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#TransportFeeding",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "TransportFeeding"
+      },
+      "instances": 0,
+      "id": "6"
+    },
+    {
+      "iri": "http://resourcedescription.tut.fi/ontology/capabilityModel#Transporting",
+      "baseIri": "http://resourcedescription.tut.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Transporting"
+      },
+      "instances": 0,
+      "id": "7"
+    },
+    {
+      "iri": "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object",
+      "baseIri": "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+      "label": {
+        "undefined": "Object"
+      },
+      "instances": 0,
+      "id": "8"
+    },
+    {
+      "iri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#CapabilityProfile",
+      "baseIri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "label": {
+        "undefined": "CapabilityProfile"
+      },
+      "instances": 0,
+      "id": "9"
+    },
+    {
+      "iri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#MachineTool",
+      "baseIri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "label": {
+        "undefined": "MachineTool"
+      },
+      "instances": 0,
+      "id": "10"
+    },
+    {
+      "iri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCCommand",
+      "baseIri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "label": {
+        "undefined": "NCCommand"
+      },
+      "instances": 0,
+      "id": "11"
+    },
+    {
+      "iri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#NCFunction",
+      "baseIri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "label": {
+        "undefined": "NCFunction"
+      },
+      "instances": 0,
+      "id": "12"
+    },
+    {
+      "iri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor#Structure",
+      "baseIri": "http://www.semanticweb.org/olart/ontologies/2024/0/InVor",
+      "label": {
+        "undefined": "Structure"
+      },
+      "instances": 0,
+      "id": "13"
+    },
+    {
+      "iri": "http://www.w3.org/ns/org#Organization",
+      "baseIri": "http://www.w3.org/ns/org",
+      "label": {
+        "undefined": "Organization"
+      },
+      "instances": 0,
+      "id": "14"
+    },
+    {
+      "iri": "http://xmlns.com/foaf/0.1/Organization",
+      "baseIri": "http://xmlns.com/foaf/0.1",
+      "label": {
+        "undefined": "Organization"
+      },
+      "instances": 0,
+      "id": "15"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#BoxShape",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "BoxShape"
+      },
+      "instances": 0,
+      "id": "16"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#Capability",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "Capability"
+      },
+      "instances": 0,
+      "id": "17"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CapabilityParameterAdditional",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "CapabilityParameterAdditional"
+      },
+      "instances": 0,
+      "id": "18"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#ConeShape",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "ConeShape"
+      },
+      "instances": 0,
+      "id": "19"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#CylinderShape",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "CylinderShape"
+      },
+      "instances": 0,
+      "id": "20"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#PyramidShape",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "PyramidShape"
+      },
+      "instances": 0,
+      "id": "21"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#SimpleCapability",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "SimpleCapability"
+      },
+      "instances": 0,
+      "id": "22"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/commonConcepts#MaterialType",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/commonConcepts",
+      "label": {
+        "undefined": "MaterialType"
+      },
+      "instances": 0,
+      "id": "23"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#BlindRiveting",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel",
+      "label": {
+        "undefined": "BlindRiveting"
+      },
+      "instances": 0,
+      "id": "24"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#BulkBoxFeeding",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel",
+      "label": {
+        "undefined": "BulkBoxFeeding"
+      },
+      "instances": 0,
+      "id": "25"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#Fixturing",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel",
+      "label": {
+        "undefined": "Fixturing"
+      },
+      "instances": 0,
+      "id": "26"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel#Hammering",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/processTaxonomyModel",
+      "label": {
+        "undefined": "Hammering"
+      },
+      "instances": 0,
+      "id": "27"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Device",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "Device"
+      },
+      "instances": 0,
+      "id": "28"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualControlDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualControlDevice"
+      },
+      "instances": 0,
+      "id": "29"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualDevice"
+      },
+      "instances": 0,
+      "id": "30"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFeedingDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualFeedingDevice"
+      },
+      "instances": 0,
+      "id": "31"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualFixturingDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualFixturingDevice"
+      },
+      "instances": 0,
+      "id": "32"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualGraspingDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualGraspingDevice"
+      },
+      "instances": 0,
+      "id": "33"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#IndividualStorageDevice",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "IndividualStorageDevice"
+      },
+      "instances": 0,
+      "id": "34"
+    },
+    {
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#Resource",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "Resource"
+      },
+      "instances": 0,
+      "id": "35"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/3DProfile",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "3DProfile"
+      },
+      "instances": 0,
+      "id": "36"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Chamfer",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Chamfer"
+      },
+      "instances": 0,
+      "id": "37"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/CuttingParameters",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "CuttingParameters"
+      },
+      "instances": 0,
+      "id": "38"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/CuttingTool",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "CuttingTool"
+      },
+      "instances": 0,
+      "id": "39"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/FinalGeometry",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "FinalGeometry"
+      },
+      "instances": 0,
+      "id": "40"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Hole",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Hole"
+      },
+      "instances": 0,
+      "id": "41"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/MachineToolComponent",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "MachineToolComponent"
+      },
+      "instances": 0,
+      "id": "42"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/MachiningTask",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "MachiningTask"
+      },
+      "instances": 0,
+      "id": "43"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/MillingTool",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "MillingTool"
+      },
+      "instances": 0,
+      "id": "44"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Plane",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Plane"
+      },
+      "instances": 0,
+      "id": "45"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Pocket",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Pocket"
+      },
+      "instances": 0,
+      "id": "46"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Shoulder",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Shoulder"
+      },
+      "instances": 0,
+      "id": "47"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Slot",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Slot"
+      },
+      "instances": 0,
+      "id": "48"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/Thread",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "Thread"
+      },
+      "instances": 0,
+      "id": "49"
+    },
+    {
+      "iri": "https://w3id.org/kg4cut/ToolType",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "ToolType"
+      },
+      "instances": 0,
+      "id": "50"
+    },
+    {
+      "iri": "https://www.w3.org/ns/org#Organization",
+      "baseIri": "https://www.w3.org/ns/org",
+      "label": {
+        "undefined": "Organization"
+      },
+      "instances": 0,
+      "id": "51"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#BiddingQuote",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "BiddingQuote"
+      },
+      "instances": 0,
+      "id": "52",
+      "comment": {
+        "undefined": "A document that provide the cost and inclusions of a project created to suit customer requirements"
+      }
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Chuck",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Chuck"
+      },
+      "instances": 0,
+      "id": "53"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ClosingDoor",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ClosingDoor"
+      },
+      "instances": 0,
+      "id": "54"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Cone",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Cone"
+      },
+      "instances": 0,
+      "id": "55"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ConeCavity",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ConeCavity"
+      },
+      "instances": 0,
+      "id": "56"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ConicalFrustum",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ConicalFrustum"
+      },
+      "instances": 0,
+      "id": "57"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#CuttingSpeed",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "vc"
+      },
+      "instances": 0,
+      "id": "58"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#CuttingTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "CuttingTool"
+      },
+      "instances": 0,
+      "id": "59"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#CuttingToolStorage",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "CuttingToolStorage"
+      },
+      "instances": 0,
+      "id": "60"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Cylinder",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Cylinder"
+      },
+      "instances": 0,
+      "id": "61"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#CylindricalCavity",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "CylindricalCavity"
+      },
+      "instances": 0,
+      "id": "62"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#DrillingCuttingTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "DrillingCuttingTool"
+      },
+      "instances": 0,
+      "id": "63"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#DrillingOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "DrillingOperation"
+      },
+      "instances": 0,
+      "id": "64"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ExternalFreeForm",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ExternalFreeForm"
+      },
+      "instances": 0,
+      "id": "65"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ExternalHelix",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ExternalHelix"
+      },
+      "instances": 0,
+      "id": "66"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ExternalShape",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ExternalShape"
+      },
+      "instances": 0,
+      "id": "67"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#FeedRate",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "f"
+      },
+      "instances": 0,
+      "id": "68"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#FinalWorkpiece",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "FinalWorkpiece"
+      },
+      "instances": 0,
+      "id": "69"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Fixture",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Fixture"
+      },
+      "instances": 0,
+      "id": "70"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Frustum",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Frustum"
+      },
+      "instances": 0,
+      "id": "71"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#FrustumCavity",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "FrustumCavity"
+      },
+      "instances": 0,
+      "id": "72"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#GangTooling",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "GangTooling"
+      },
+      "instances": 0,
+      "id": "73"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#GeometricalShape",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "GeometricalShape"
+      },
+      "instances": 0,
+      "id": "74"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#HexagonalPrism",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "HexagonalPrism"
+      },
+      "instances": 0,
+      "id": "75"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#InternalFreeFormCavity",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "InternalFreeFormCavity"
+      },
+      "instances": 0,
+      "id": "76"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#InternalHelix",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "InternalHelix"
+      },
+      "instances": 0,
+      "id": "77"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#InternalShape",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "InternalShape"
+      },
+      "instances": 0,
+      "id": "78"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Lathe",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Lathe"
+      },
+      "instances": 0,
+      "id": "79"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MachineOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MachineOperation"
+      },
+      "instances": 0,
+      "id": "80"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MachineTendingBiddingQuote",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MachineTendingBiddingQuote"
+      },
+      "instances": 0,
+      "id": "81"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MachineTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MachineTool"
+      },
+      "instances": 0,
+      "id": "82",
+      "comment": {
+        "en": "Machine tool, any stationary power-driven machine that is used to shape or form parts made of metal or other materials. The shaping is accomplished in four general ways: (1) by cutting excess material in the form of chips from the part; (2) by shearing the material; (3) by squeezing metallic parts to the desired shape; and (4) by applying electricity, ultrasound, or corrosive chemicals to the material. The fourth category covers modern machine tools and processes for machining ultrahard metals not machinable by older methods [https://www.britannica.com/technology/machine-tool#ref39137]."
+      }
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MachineToolComponent",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MachineToolComponent"
+      },
+      "instances": 0,
+      "id": "83"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MachiningOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MachiningOperation"
+      },
+      "instances": 0,
+      "id": "84"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ManualOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ManualOperation"
+      },
+      "instances": 0,
+      "id": "85"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Manufacturer",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Manufacturer"
+      },
+      "instances": 0,
+      "id": "86"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#ManufacturingProcessPlan",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "ManufacturingProcessPlan"
+      },
+      "instances": 0,
+      "id": "87",
+      "comment": {
+        "undefined": "In machining, it is the document that compile all the information related to the manufacturing process of a workpiece"
+      }
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Material",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Material"
+      },
+      "instances": 0,
+      "id": "88"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MaterialRemoved",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MaterialRemoved"
+      },
+      "instances": 0,
+      "id": "89"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MillingCuttingTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MillingCuttingTool"
+      },
+      "instances": 0,
+      "id": "90"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#MillingOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "MillingOperation"
+      },
+      "instances": 0,
+      "id": "91"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#NumZ",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "NumZ"
+      },
+      "instances": 0,
+      "id": "92"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#OpeningDoor",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "OpeningDoor"
+      },
+      "instances": 0,
+      "id": "93"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Operation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Operation"
+      },
+      "instances": 0,
+      "id": "94",
+      "comment": {
+        "en": "Agregation of tasks related to manufacturing production"
+      }
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Parameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Parameter"
+      },
+      "instances": 0,
+      "id": "95"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#PeckDepth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "PeckDepth"
+      },
+      "instances": 0,
+      "id": "96"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Prism",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Prism"
+      },
+      "instances": 0,
+      "id": "97"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#PrismCavity",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "PrismCavity"
+      },
+      "instances": 0,
+      "id": "98"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Process",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Process"
+      },
+      "instances": 0,
+      "id": "99"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#RawWorkpiece",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "RawWorkpiece"
+      },
+      "instances": 0,
+      "id": "100"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#RoboticLoading",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "RoboticLoading"
+      },
+      "instances": 0,
+      "id": "101"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#RoboticOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "RoboticOperation"
+      },
+      "instances": 0,
+      "id": "102"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#RoboticRepositioning",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "RoboticRepositioning"
+      },
+      "instances": 0,
+      "id": "103"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#RoboticUnloading",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "RoboticUnloading"
+      },
+      "instances": 0,
+      "id": "104"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#SemiFinalWorkpiece",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "SemiFinalWorkpiece"
+      },
+      "instances": 0,
+      "id": "105"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Spindle",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Spindle"
+      },
+      "instances": 0,
+      "id": "106"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Task",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Task"
+      },
+      "instances": 0,
+      "id": "107",
+      "comment": {
+        "en": "Smallest level of granularity where it is possible to declare all the inputs required to obtain/create/produce the output"
+      }
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#TheoreticalSurfaceFinished",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "h"
+      },
+      "instances": 0,
+      "id": "108"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#TurningCuttingTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "TurningCuttingTool"
+      },
+      "instances": 0,
+      "id": "109"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#TurningOperation",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Turning"
+      },
+      "instances": 0,
+      "id": "110"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Turret",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Turret"
+      },
+      "instances": 0,
+      "id": "111"
+    },
+    {
+      "iri": "https://www.w3id.org/MachPP#Workpiece",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "Workpiece"
+      },
+      "instances": 0,
+      "id": "112"
+    },
+    {
+      "iri": "http://www.w3.org/2001/XMLSchema#float",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "undefined": "float"
+      },
+      "instances": 0,
+      "id": "113"
+    },
+    {
+      "iri": "http://www.w3.org/2001/XMLSchema#integer",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "undefined": "integer"
+      },
+      "instances": 0,
+      "id": "114"
+    },
+    {
+      "iri": "http://www.w3.org/2001/XMLSchema#string",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "undefined": "string"
+      },
+      "instances": 0,
+      "id": "115"
+    }
+  ],
+  "property": [
+    {
+      "id": "p0",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p1",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p2",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p3",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p4",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p5",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p6",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p7",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p8",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p9",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p10",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p11",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p12",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p13",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p14",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p15",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p16",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p17",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p18",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p19",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p20",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p21",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p22",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p23",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p24",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p25",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p26",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p27",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p28",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p29",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p30",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p31",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p32",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p33",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p34",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p35",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p36",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p37",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p38",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p39",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p40",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p41",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p42",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p43",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p44",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p45",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p46",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p47",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p48",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p49",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p50",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p51",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p52",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p53",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p54",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p55",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p56",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p57",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p58",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p59",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p60",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p61",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p62",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p63",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p64",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p65",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p66",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p67",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p68",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p69",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p70",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p71",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p72",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p73",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p74",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "p75",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p76",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p77",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p78",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p79",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p80",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p81",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p82",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p83",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p84",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p85",
+      "type": "owl:equivalentClass"
+    },
+    {
+      "id": "p86",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p87",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p88",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p89",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p90",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p91",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p92",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p93",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p94",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p95",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p96",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p97",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p98",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p99",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p100",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p101",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p102",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p103",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p104",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p105",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p106",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p107",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p108",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p109",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p110",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p111",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p112",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p113",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p114",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p115",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p116",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p117",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p118",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p119",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p120",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p121",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p122",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p123",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p124",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p125",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p126",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p127",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p128",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p129",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p130",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p131",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p132",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p133",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p134",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p135",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p136",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p137",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p138",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p139",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p140",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p141",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p142",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p143",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p144",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p145",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p146",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p147",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p148",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p149",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p150",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p151",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p152",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p153",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p154",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "p155",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p156",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p157",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p158",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p159",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p160",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p161",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p162",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p163",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p164",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p165",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "p166",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "p0",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "2",
+      "range": "107"
+    },
+    {
+      "id": "p1",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "3",
+      "range": "107"
+    },
+    {
+      "id": "p2",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "4",
+      "range": "107"
+    },
+    {
+      "id": "p3",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "5",
+      "range": "107"
+    },
+    {
+      "id": "p4",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "6",
+      "range": "107"
+    },
+    {
+      "id": "p5",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "7",
+      "range": "107"
+    },
+    {
+      "id": "p6",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "24",
+      "range": "107"
+    },
+    {
+      "id": "p7",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "25",
+      "range": "107"
+    },
+    {
+      "id": "p8",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "26",
+      "range": "107"
+    },
+    {
+      "id": "p9",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "27",
+      "range": "107"
+    },
+    {
+      "id": "p10",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "43",
+      "range": "107"
+    },
+    {
+      "id": "p11",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "8",
+      "range": "35"
+    },
+    {
+      "id": "p12",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "9",
+      "range": "17"
+    },
+    {
+      "id": "p13",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "11",
+      "range": "17"
+    },
+    {
+      "id": "p14",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "50",
+      "range": "17"
+    },
+    {
+      "id": "p15",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "12",
+      "range": "22"
+    },
+    {
+      "id": "p16",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "13",
+      "range": "18"
+    },
+    {
+      "id": "p17",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "95",
+      "range": "18"
+    },
+    {
+      "id": "p18",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "14",
+      "range": "1"
+    },
+    {
+      "id": "p19",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "15",
+      "range": "1"
+    },
+    {
+      "id": "p20",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "51",
+      "range": "1"
+    },
+    {
+      "id": "p21",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "38",
+      "range": "95"
+    },
+    {
+      "id": "p22",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "58",
+      "range": "95"
+    },
+    {
+      "id": "p23",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "68",
+      "range": "95"
+    },
+    {
+      "id": "p24",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "92",
+      "range": "95"
+    },
+    {
+      "id": "p25",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "96",
+      "range": "95"
+    },
+    {
+      "id": "p26",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "108",
+      "range": "95"
+    },
+    {
+      "id": "p27",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "49",
+      "range": "40"
+    },
+    {
+      "id": "p28",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "52",
+      "range": "0"
+    },
+    {
+      "id": "p29",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "53",
+      "range": "70"
+    },
+    {
+      "id": "p30",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "54",
+      "range": "80"
+    },
+    {
+      "id": "p31",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "93",
+      "range": "80"
+    },
+    {
+      "id": "p32",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "55",
+      "range": "67"
+    },
+    {
+      "id": "p33",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "61",
+      "range": "67"
+    },
+    {
+      "id": "p34",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "65",
+      "range": "67"
+    },
+    {
+      "id": "p35",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "66",
+      "range": "67"
+    },
+    {
+      "id": "p36",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "71",
+      "range": "67"
+    },
+    {
+      "id": "p37",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "97",
+      "range": "67"
+    },
+    {
+      "id": "p38",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "56",
+      "range": "78"
+    },
+    {
+      "id": "p39",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "62",
+      "range": "78"
+    },
+    {
+      "id": "p40",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "72",
+      "range": "78"
+    },
+    {
+      "id": "p41",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "76",
+      "range": "78"
+    },
+    {
+      "id": "p42",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "77",
+      "range": "78"
+    },
+    {
+      "id": "p43",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "98",
+      "range": "78"
+    },
+    {
+      "id": "p44",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "57",
+      "range": "71"
+    },
+    {
+      "id": "p45",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "60",
+      "range": "83"
+    },
+    {
+      "id": "p46",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "70",
+      "range": "83"
+    },
+    {
+      "id": "p47",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "106",
+      "range": "83"
+    },
+    {
+      "id": "p48",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "63",
+      "range": "59"
+    },
+    {
+      "id": "p49",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "90",
+      "range": "59"
+    },
+    {
+      "id": "p50",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "109",
+      "range": "59"
+    },
+    {
+      "id": "p51",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "64",
+      "range": "84"
+    },
+    {
+      "id": "p52",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "91",
+      "range": "84"
+    },
+    {
+      "id": "p53",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "110",
+      "range": "84"
+    },
+    {
+      "id": "p54",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "67",
+      "range": "74"
+    },
+    {
+      "id": "p55",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "78",
+      "range": "74"
+    },
+    {
+      "id": "p56",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "69",
+      "range": "112"
+    },
+    {
+      "id": "p57",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "100",
+      "range": "112"
+    },
+    {
+      "id": "p58",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "105",
+      "range": "112"
+    },
+    {
+      "id": "p59",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "73",
+      "range": "60"
+    },
+    {
+      "id": "p60",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "111",
+      "range": "60"
+    },
+    {
+      "id": "p61",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "75",
+      "range": "97"
+    },
+    {
+      "id": "p62",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "79",
+      "range": "82"
+    },
+    {
+      "id": "p63",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "80",
+      "range": "94"
+    },
+    {
+      "id": "p64",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "84",
+      "range": "94"
+    },
+    {
+      "id": "p65",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "85",
+      "range": "94"
+    },
+    {
+      "id": "p66",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "102",
+      "range": "94"
+    },
+    {
+      "id": "p67",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "81",
+      "range": "52"
+    },
+    {
+      "id": "p68",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "82",
+      "range": "30"
+    },
+    {
+      "id": "p69",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "86",
+      "range": "51"
+    },
+    {
+      "id": "p70",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "89",
+      "range": "88"
+    },
+    {
+      "id": "p71",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "101",
+      "range": "102"
+    },
+    {
+      "id": "p72",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "103",
+      "range": "102"
+    },
+    {
+      "id": "p73",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "104",
+      "range": "102"
+    },
+    {
+      "id": "p74",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": {
+        "undefined": "subClassOf"
+      },
+      "domain": "112",
+      "range": "8"
+    },
+    {
+      "id": "p75",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "8",
+      "range": "30"
+    },
+    {
+      "id": "p76",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "10",
+      "range": "82"
+    },
+    {
+      "id": "p77",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "14",
+      "range": "51"
+    },
+    {
+      "id": "p78",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "16",
+      "range": "97"
+    },
+    {
+      "id": "p79",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "19",
+      "range": "55"
+    },
+    {
+      "id": "p80",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "20",
+      "range": "61"
+    },
+    {
+      "id": "p81",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "21",
+      "range": "71"
+    },
+    {
+      "id": "p82",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "23",
+      "range": "88"
+    },
+    {
+      "id": "p83",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "39",
+      "range": "59"
+    },
+    {
+      "id": "p84",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "42",
+      "range": "83"
+    },
+    {
+      "id": "p85",
+      "iri": "http://www.w3.org/2002/07/owl#equivalentClass",
+      "baseIri": "http://www.w3.org/2002/07/owl",
+      "label": {
+        "undefined": "equivalentClass"
+      },
+      "domain": "44",
+      "range": "90"
+    },
+    {
+      "id": "p86",
+      "iri": "https://www.w3id.org/MachPP#hasBaseEdge",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasBaseEdge"
+      },
+      "domain": "74",
+      "range": "113"
+    },
+    {
+      "id": "p87",
+      "iri": "https://www.w3id.org/MachPP#hasCode",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasCode"
+      },
+      "domain": "112",
+      "range": "115"
+    },
+    {
+      "id": "p88",
+      "iri": "https://www.w3id.org/MachPP#hasDepth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDepth"
+      },
+      "domain": "74",
+      "range": "113"
+    },
+    {
+      "id": "p89",
+      "iri": "https://www.w3id.org/MachPP#hasDiameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDiameter"
+      },
+      "domain": "74",
+      "range": "113"
+    },
+    {
+      "id": "p90",
+      "iri": "https://www.w3id.org/MachPP#hasDuration",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDuration"
+      },
+      "domain": "107",
+      "range": "113"
+    },
+    {
+      "id": "p91",
+      "iri": "https://www.w3id.org/MachPP#hasFeedRate",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasFeedRate"
+      },
+      "domain": "59",
+      "range": "113"
+    },
+    {
+      "id": "p92",
+      "iri": "https://www.w3id.org/MachPP#hasISOCode",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasISOCode"
+      },
+      "domain": "59",
+      "range": "115"
+    },
+    {
+      "id": "p93",
+      "iri": "https://www.w3id.org/MachPP#hasMaxCuttingTool",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasMaxCuttingTool"
+      },
+      "domain": "60",
+      "range": "114"
+    },
+    {
+      "id": "p94",
+      "iri": "https://www.w3id.org/MachPP#hasMaxDiameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasMaxDiameter"
+      },
+      "domain": "53",
+      "range": "113"
+    },
+    {
+      "id": "p95",
+      "iri": "https://www.w3id.org/MachPP#hasMaxSpeed",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasMaxSpeed"
+      },
+      "domain": "59",
+      "range": "113"
+    },
+    {
+      "id": "p96",
+      "iri": "https://www.w3id.org/MachPP#hasNumPasses",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasNumPasses"
+      },
+      "domain": "59",
+      "range": "114"
+    },
+    {
+      "id": "p97",
+      "iri": "https://www.w3id.org/MachPP#hasNumZ",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasNumZ"
+      },
+      "domain": "59",
+      "range": "114"
+    },
+    {
+      "id": "p98",
+      "iri": "https://www.w3id.org/MachPP#hasPeckDepth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPeckDepth"
+      },
+      "domain": "59",
+      "range": "114"
+    },
+    {
+      "id": "p99",
+      "iri": "https://www.w3id.org/MachPP#hasPitch",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPitch"
+      },
+      "domain": "74",
+      "range": "113"
+    },
+    {
+      "id": "p100",
+      "iri": "https://www.w3id.org/MachPP#hasProjectNumber",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasProjectNumber"
+      },
+      "domain": "87",
+      "range": "115"
+    },
+    {
+      "id": "p101",
+      "iri": "https://www.w3id.org/MachPP#hasRecommendedSpeed",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasRecommendedSpeed"
+      },
+      "domain": "59",
+      "range": "113"
+    },
+    {
+      "id": "p102",
+      "iri": "https://www.w3id.org/MachPP#hasThickness",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasThickness"
+      },
+      "domain": "89",
+      "range": "113"
+    },
+    {
+      "id": "p103",
+      "iri": "https://www.w3id.org/MachPP#hasWidth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasWidth"
+      },
+      "domain": "74",
+      "range": "113"
+    },
+    {
+      "id": "p104",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "16",
+      "range": "45",
+      "restriction": "some"
+    },
+    {
+      "id": "p105",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "16",
+      "range": "47",
+      "restriction": "some"
+    },
+    {
+      "id": "p106",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "19",
+      "range": "37",
+      "restriction": "some"
+    },
+    {
+      "id": "p107",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "19",
+      "range": "45",
+      "restriction": "some"
+    },
+    {
+      "id": "p108",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "19",
+      "range": "47",
+      "restriction": "some"
+    },
+    {
+      "id": "p109",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "20",
+      "range": "45",
+      "restriction": "some"
+    },
+    {
+      "id": "p110",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "20",
+      "range": "47",
+      "restriction": "some"
+    },
+    {
+      "id": "p111",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "21",
+      "range": "37",
+      "restriction": "some"
+    },
+    {
+      "id": "p112",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "21",
+      "range": "45",
+      "restriction": "some"
+    },
+    {
+      "id": "p113",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "21",
+      "range": "47",
+      "restriction": "some"
+    },
+    {
+      "id": "p114",
+      "iri": "https://www.w3id.org/MachPP#hasPrice",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPrice"
+      },
+      "domain": "28",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p115",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "containsResource"
+      },
+      "domain": "52",
+      "range": "35",
+      "restriction": "some"
+    },
+    {
+      "id": "p116",
+      "iri": "https://www.w3id.org/MachPP#hasPrice",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPrice"
+      },
+      "domain": "52",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p117",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "56",
+      "range": "37",
+      "restriction": "some"
+    },
+    {
+      "id": "p118",
+      "iri": "https://www.w3id.org/MachPP#hasDiameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDiameter"
+      },
+      "domain": "57",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 2
+    },
+    {
+      "id": "p119",
+      "iri": "https://www.w3id.org/MachPP#hasLength",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasLength"
+      },
+      "domain": "57",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1,
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasLength"
+      ]
+    },
+    {
+      "id": "p120",
+      "iri": "https://www.w3id.org/MachPP#hasManufacturer",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasManufacturer"
+      },
+      "domain": "59",
+      "range": "86",
+      "restriction": "some"
+    },
+    {
+      "id": "p121",
+      "iri": "https://www.w3id.org/MachPP#hasParameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasParameter"
+      },
+      "domain": "59",
+      "range": "95",
+      "restriction": "some"
+    },
+    {
+      "id": "p122",
+      "iri": "https://www.w3id.org/MachPP#isSpecificFor",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "isSpecificFor"
+      },
+      "domain": "59",
+      "range": "84",
+      "restriction": "some"
+    },
+    {
+      "id": "p123",
+      "iri": "https://www.w3id.org/MachPP#isStoredIn",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "isStoredIn"
+      },
+      "domain": "59",
+      "range": "111",
+      "restriction": "some"
+    },
+    {
+      "id": "p124",
+      "iri": "https://www.w3id.org/MachPP#performs",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "performs"
+      },
+      "domain": "59",
+      "range": "84",
+      "restriction": "some"
+    },
+    {
+      "id": "p125",
+      "iri": "https://www.w3id.org/MachPP#cuts",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "cuts"
+      },
+      "domain": "59",
+      "range": "112",
+      "restriction": "all"
+    },
+    {
+      "id": "p126",
+      "iri": "https://www.w3id.org/MachPP#hasDiameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDiameter"
+      },
+      "domain": "61",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p127",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "62",
+      "range": "41",
+      "restriction": "some"
+    },
+    {
+      "id": "p128",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "65",
+      "range": "36",
+      "restriction": "some"
+    },
+    {
+      "id": "p129",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize"
+      },
+      "domain": "66",
+      "range": "49",
+      "restriction": "some"
+    },
+    {
+      "id": "p130",
+      "iri": "https://www.w3id.org/MachPP#hasDiameter",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDiameter"
+      },
+      "domain": "66",
+      "range": "113",
+      "restriction": "some"
+    },
+    {
+      "id": "p131",
+      "iri": "https://www.w3id.org/MachPP#hasLength",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasLength"
+      },
+      "domain": "66",
+      "range": "113",
+      "restriction": "some",
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasLength"
+      ]
+    },
+    {
+      "id": "p132",
+      "iri": "https://www.w3id.org/MachPP#hasPitch",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPitch"
+      },
+      "domain": "66",
+      "range": "113",
+      "restriction": "some"
+    },
+    {
+      "id": "p133",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "72",
+      "range": "46",
+      "restriction": "some"
+    },
+    {
+      "id": "p134",
+      "iri": "https://www.w3id.org/MachPP#hasLength",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasLength"
+      },
+      "domain": "75",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1,
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasLength"
+      ]
+    },
+    {
+      "id": "p135",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "76",
+      "range": "36",
+      "restriction": "some"
+    },
+    {
+      "id": "p136",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "77",
+      "range": "49",
+      "restriction": "some"
+    },
+    {
+      "id": "p137",
+      "iri": "https://www.w3id.org/MachPP#hasWorkholding",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasWorkholding"
+      },
+      "domain": "79",
+      "range": "53",
+      "restriction": "some"
+    },
+    {
+      "id": "p138",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#containsResource",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "containsResource"
+      },
+      "domain": "81",
+      "range": "35",
+      "restriction": "some"
+    },
+    {
+      "id": "p139",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#hasBasicResourceInformation",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "hasBasicResourceInformation"
+      },
+      "domain": "81",
+      "range": "87",
+      "restriction": "some"
+    },
+    {
+      "id": "p140",
+      "iri": "https://www.w3id.org/MachPP#hasComponent",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasComponent"
+      },
+      "domain": "82",
+      "range": "83",
+      "restriction": "some"
+    },
+    {
+      "id": "p141",
+      "iri": "https://www.w3id.org/MachPP#hasManufacturer",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasManufacturer"
+      },
+      "domain": "82",
+      "range": "86",
+      "restriction": "all"
+    },
+    {
+      "id": "p142",
+      "iri": "https://w3id.org/kg4cut/performsTask",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "performsTask"
+      },
+      "domain": "84",
+      "range": "107",
+      "restriction": "some"
+    },
+    {
+      "id": "p143",
+      "iri": "https://www.w3id.org/MachPP#produces",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "produces"
+      },
+      "domain": "84",
+      "range": "112",
+      "restriction": "some"
+    },
+    {
+      "id": "p144",
+      "iri": "https://www.w3id.org/MachPP#transforms",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "transforms"
+      },
+      "domain": "84",
+      "range": "74",
+      "restriction": "some"
+    },
+    {
+      "id": "p145",
+      "iri": "https://w3id.org/pmd/co/composedof",
+      "baseIri": "https://w3id.org/pmd/co",
+      "label": {
+        "undefined": "composedof"
+      },
+      "domain": "87",
+      "range": "107",
+      "restriction": "some"
+    },
+    {
+      "id": "p146",
+      "iri": "https://www.w3id.org/MachPP#estimatesProduction",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "estimatesProduction"
+      },
+      "domain": "87",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p147",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel#requiresResource",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/resourceModel",
+      "label": {
+        "undefined": "requiresResource"
+      },
+      "domain": "94",
+      "range": "35",
+      "restriction": "some"
+    },
+    {
+      "id": "p148",
+      "iri": "https://w3id.org/pmd/co/composedof",
+      "baseIri": "https://w3id.org/pmd/co",
+      "label": {
+        "undefined": "composedof"
+      },
+      "domain": "94",
+      "range": "107",
+      "restriction": "some"
+    },
+    {
+      "id": "p149",
+      "iri": "https://www.w3id.org/MachPP#performedBy",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "performedBy"
+      },
+      "domain": "94",
+      "range": "1",
+      "restriction": "class",
+      "minCardinality": 1
+    },
+    {
+      "id": "p150",
+      "iri": "https://www.w3id.org/MachPP#hasValue",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasValue"
+      },
+      "domain": "95",
+      "range": "113",
+      "restriction": "some"
+    },
+    {
+      "id": "p151",
+      "iri": "https://www.w3id.org/MachPP#hasFeedRate",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasFeedRate"
+      },
+      "domain": "95",
+      "range": "113",
+      "restriction": "data",
+      "minCardinality": 1
+    },
+    {
+      "id": "p152",
+      "iri": "https://www.w3id.org/MachPP#hasDepth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasDepth"
+      },
+      "domain": "97",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p153",
+      "iri": "https://www.w3id.org/MachPP#hasLength",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasLength"
+      },
+      "domain": "97",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1,
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasLength"
+      ]
+    },
+    {
+      "id": "p154",
+      "iri": "https://www.w3id.org/MachPP#hasWidth",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasWidth"
+      },
+      "domain": "97",
+      "range": "113",
+      "restriction": "data",
+      "cardinality": 1
+    },
+    {
+      "id": "p155",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "98",
+      "range": "46",
+      "restriction": "some"
+    },
+    {
+      "id": "p156",
+      "iri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel#hasShapeAndSize_internal",
+      "baseIri": "https://resourcedescription.rd.tuni.fi/ontology/capabilityModel",
+      "label": {
+        "undefined": "hasShapeAndSize_internal"
+      },
+      "domain": "98",
+      "range": "48",
+      "restriction": "some"
+    },
+    {
+      "id": "p157",
+      "iri": "https://w3id.org/pmd/co/composedof",
+      "baseIri": "https://w3id.org/pmd/co",
+      "label": {
+        "undefined": "composedof"
+      },
+      "domain": "99",
+      "range": "94",
+      "restriction": "some"
+    },
+    {
+      "id": "p158",
+      "iri": "https://www.w3id.org/MachPP#produces",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "produces"
+      },
+      "domain": "99",
+      "range": "87",
+      "restriction": "class",
+      "minCardinality": 1
+    },
+    {
+      "id": "p159",
+      "iri": "https://w3id.org/pmd/co/input",
+      "baseIri": "https://w3id.org/pmd/co",
+      "label": {
+        "undefined": "input"
+      },
+      "domain": "107",
+      "range": "95",
+      "restriction": "some",
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasInput"
+      ]
+    },
+    {
+      "id": "p160",
+      "iri": "https://www.w3id.org/MachPP#hasInputRole",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasInputRole"
+      },
+      "domain": "107",
+      "range": "95",
+      "restriction": "some",
+      "equivalent": [
+        "https://w3id.org/kg4cut/hasInput"
+      ]
+    },
+    {
+      "id": "p161",
+      "iri": "https://www.w3id.org/MachPP#hasPredecessor",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasPredecessor"
+      },
+      "domain": "107",
+      "range": "107",
+      "restriction": "some",
+      "inverse": [
+        "https://www.w3id.org/MachPP#hasSuccessor"
+      ]
+    },
+    {
+      "id": "p162",
+      "iri": "https://www.w3id.org/MachPP#hasSuccessor",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "hasSuccessor"
+      },
+      "domain": "107",
+      "range": "107",
+      "restriction": "some",
+      "inverse": [
+        "https://www.w3id.org/MachPP#hasPredecessor"
+      ]
+    },
+    {
+      "id": "p163",
+      "iri": "https://www.w3id.org/MachPP#isSpecifiedBy",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "isSpecifiedBy"
+      },
+      "domain": "107",
+      "range": "94",
+      "restriction": "some"
+    },
+    {
+      "id": "p164",
+      "iri": "https://w3id.org/kg4cut/isMountedOnMachineTool",
+      "baseIri": "https://w3id.org/kg4cut",
+      "label": {
+        "undefined": "isMountedOnMachineTool"
+      },
+      "domain": "112",
+      "range": "35",
+      "restriction": "some"
+    },
+    {
+      "id": "p165",
+      "iri": "https://w3id.org/pmd/co/composedof",
+      "baseIri": "https://w3id.org/pmd/co",
+      "label": {
+        "undefined": "composedof"
+      },
+      "domain": "112",
+      "range": "88",
+      "restriction": "some"
+    },
+    {
+      "id": "p166",
+      "iri": "https://www.w3id.org/MachPP#isFixedIn",
+      "baseIri": "https://www.w3id.org/MachPP",
+      "label": {
+        "undefined": "isFixedIn"
+      },
+      "domain": "112",
+      "range": "70",
+      "restriction": "some"
+    }
+  ]
 }
